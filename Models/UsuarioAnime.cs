@@ -10,6 +10,6 @@ namespace AnimesHub.Models
         public int AnimeId { get; set; }
         public Anime Anime { get; set; }
 
-        public ModeNivel ModeNivel { get; set; }
+        public StatusAnime ModeNivel { get; set; }
     }
 }

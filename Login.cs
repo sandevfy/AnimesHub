@@ -45,9 +45,9 @@ namespace AnimesHub
 
                 this.Hide();
 
-                DialogResult resultado = formPrincipal.ShowDialog();    
+                DialogResult resultado = formPrincipal.ShowDialog();
 
-                if(resultado == DialogResult.OK)
+                if (resultado == DialogResult.OK)
                 {
                     // Clicou em Sair
                     this.Show();
@@ -58,7 +58,7 @@ namespace AnimesHub
                     Application.Exit();
                 }
 
-                
+
             }
             else
             {
@@ -69,11 +69,6 @@ namespace AnimesHub
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Cadastramento em desenvolvimento");
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

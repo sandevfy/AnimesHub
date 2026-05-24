@@ -116,13 +116,16 @@
             // 
             txtUserSenha.Location = new Point(44, 203);
             txtUserSenha.Name = "txtUserSenha";
+            txtUserSenha.PlaceholderText = "Digite sua senha";
             txtUserSenha.Size = new Size(208, 23);
             txtUserSenha.TabIndex = 3;
+            txtUserSenha.UseSystemPasswordChar = true;
             // 
             // txtUserLogin
             // 
             txtUserLogin.Location = new Point(44, 128);
             txtUserLogin.Name = "txtUserLogin";
+            txtUserLogin.PlaceholderText = "Digite seu nome de usuario";
             txtUserLogin.Size = new Size(208, 23);
             txtUserLogin.TabIndex = 2;
             // 
@@ -264,7 +267,6 @@
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
-            Load += Login_Load;
             pnlLogin.ResumeLayout(false);
             pnlLogin.PerformLayout();
             pnlCadastrar.ResumeLayout(false);
