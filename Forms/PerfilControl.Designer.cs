@@ -28,34 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(237, 206);
-            label1.Name = "label1";
-            label1.Size = new Size(238, 86);
-            label1.TabIndex = 0;
-            label1.Text = "PERFIL";
             // 
             // PerfilControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkRed;
-            Controls.Add(label1);
             Name = "PerfilControl";
-            Size = new Size(475, 302);
+            Size = new Size(706, 491);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
     }
 }

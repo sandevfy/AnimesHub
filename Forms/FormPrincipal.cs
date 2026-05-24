@@ -15,7 +15,7 @@ namespace AnimesHub.Forms
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void FormPrincipal_Load(object sender, EventArgs e)
         {
             pnlConteudo.Controls.Clear();
 
@@ -25,17 +25,17 @@ namespace AnimesHub.Forms
             pnlConteudo.Controls.Add(home);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnUcHome_Click(object sender, EventArgs e)
         {
             pnlConteudo.Controls.Clear();
 
-            ConfigControl config = new ConfigControl();
-            config.Dock = DockStyle.Fill;
+            HomeControl home = new HomeControl();
+            home.Dock = DockStyle.Fill;
 
-            pnlConteudo.Controls.Add(config);
+            pnlConteudo.Controls.Add(home);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnUcPerfil_Click(object sender, EventArgs e)
         {
             pnlConteudo.Controls.Clear();
 
@@ -43,6 +43,22 @@ namespace AnimesHub.Forms
             perfil.Dock = DockStyle.Fill;
 
             pnlConteudo.Controls.Add(perfil);
+        }
+
+        private void btnSairLogin_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Tem certeza que deseja sair da conta?",
+                "Confirmação",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+
+
         }
     }
 }
