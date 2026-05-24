@@ -39,8 +39,6 @@ namespace AnimesHub
 
         private void btnLoginEntrar_Click(object sender, EventArgs e)
         {
-            if (txtUserLogin.Text == "adm" && txtUserSenha.Text == "adm")
-            {
                 var formPrincipal = new FormPrincipal();
 
                 this.Hide();
@@ -57,18 +55,16 @@ namespace AnimesHub
                     // Clicou no X
                     Application.Exit();
                 }
-
-
-            }
-            else
-            {
-                MessageBox.Show("Conta Não Autorizada!");
-            }
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Cadastramento em desenvolvimento");
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

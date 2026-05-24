@@ -24,12 +24,38 @@ namespace AnimesHub.Forms
 
                 anim.SetAnime();
                 flpLancamentos.Controls.Add(anim);
+
+                AnimeCardControl anim2 = new AnimeCardControl();
+
+                anim2.SetAnime();
+                flpAcompanhando.Controls.Add(anim2);
+
+                AnimeCardControl anim3 = new AnimeCardControl();
+
+                anim3.SetAnime();
+                flpAssistindo.Controls.Add(anim3);
+
+                AnimeCardControl anim4 = new AnimeCardControl();
+
+                anim4.SetAnime();
+                flpParaAssistir.Controls.Add(anim4);
+
+                AnimeCardControl anim5 = new AnimeCardControl();
+
+                anim5.SetAnime();
+                flpAssistido.Controls.Add(anim5);
+
             }
         }
 
         private void HomeControl_Load(object sender, EventArgs e)
         {
             LoadCards();
+        }
+
+        private void pnlLançamentos_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
