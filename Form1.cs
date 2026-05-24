@@ -1,3 +1,4 @@
+using AnimesHub.Forms;
 using System.Drawing.Drawing2D;
 
 namespace AnimesHub
@@ -40,7 +41,10 @@ namespace AnimesHub
         {
             if (txtUserLogin.Text == "adm" && txtUserSenha.Text == "adm")
             {
-                MessageBox.Show("Conta Autorizada!");
+                var formPrincipal = new FormPrincipal();
+
+                formPrincipal.Show();
+                this.Hide();
             }
             else
             {

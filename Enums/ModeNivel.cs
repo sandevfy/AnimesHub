@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AnimesHub.Enums
+﻿namespace AnimesHub.Enums
 {
     internal enum ModeNivel
     {
