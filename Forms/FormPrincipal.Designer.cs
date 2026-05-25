@@ -42,8 +42,6 @@
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            label3 = new Label();
-            label4 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -54,12 +52,12 @@
             pnlConteudo.Dock = DockStyle.Fill;
             pnlConteudo.Location = new Point(133, 0);
             pnlConteudo.Name = "pnlConteudo";
-            pnlConteudo.Size = new Size(667, 609);
+            pnlConteudo.Size = new Size(667, 450);
             pnlConteudo.TabIndex = 0;
             // 
             // btnUcHome
             // 
-            btnUcHome.Location = new Point(12, 154);
+            btnUcHome.Location = new Point(12, 117);
             btnUcHome.Name = "btnUcHome";
             btnUcHome.Size = new Size(115, 23);
             btnUcHome.TabIndex = 1;
@@ -69,7 +67,7 @@
             // 
             // btnUcPerfil
             // 
-            btnUcPerfil.Location = new Point(12, 183);
+            btnUcPerfil.Location = new Point(12, 146);
             btnUcPerfil.Name = "btnUcPerfil";
             btnUcPerfil.Size = new Size(115, 23);
             btnUcPerfil.TabIndex = 3;
@@ -79,8 +77,6 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label3);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(btnSairLogin);
             panel1.Controls.Add(button7);
@@ -96,12 +92,12 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(133, 609);
+            panel1.Size = new Size(133, 450);
             panel1.TabIndex = 4;
             // 
             // button1
             // 
-            button1.Location = new Point(12, 357);
+            button1.Location = new Point(12, 320);
             button1.Name = "button1";
             button1.Size = new Size(115, 23);
             button1.TabIndex = 11;
@@ -111,7 +107,7 @@
             // btnSairLogin
             // 
             btnSairLogin.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnSairLogin.Location = new Point(12, 574);
+            btnSairLogin.Location = new Point(12, 415);
             btnSairLogin.Name = "btnSairLogin";
             btnSairLogin.Size = new Size(115, 23);
             btnSairLogin.TabIndex = 10;
@@ -121,7 +117,7 @@
             // 
             // button7
             // 
-            button7.Location = new Point(12, 328);
+            button7.Location = new Point(12, 291);
             button7.Name = "button7";
             button7.Size = new Size(115, 23);
             button7.TabIndex = 9;
@@ -130,7 +126,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(12, 299);
+            button6.Location = new Point(12, 262);
             button6.Name = "button6";
             button6.Size = new Size(115, 23);
             button6.TabIndex = 8;
@@ -139,7 +135,7 @@
             // 
             // button5
             // 
-            button5.Location = new Point(12, 270);
+            button5.Location = new Point(12, 233);
             button5.Name = "button5";
             button5.Size = new Size(115, 23);
             button5.TabIndex = 7;
@@ -148,7 +144,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(12, 241);
+            button4.Location = new Point(12, 204);
             button4.Name = "button4";
             button4.Size = new Size(115, 23);
             button4.TabIndex = 6;
@@ -157,7 +153,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(12, 212);
+            button2.Location = new Point(12, 175);
             button2.Name = "button2";
             button2.Size = new Size(115, 23);
             button2.TabIndex = 5;
@@ -191,29 +187,11 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(12, 106);
-            label3.Name = "label3";
-            label3.Size = new Size(71, 15);
-            label3.TabIndex = 12;
-            label3.Text = "Assistidos: 2";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(12, 126);
-            label4.Name = "label4";
-            label4.Size = new Size(67, 15);
-            label4.TabIndex = 13;
-            label4.Text = "Favoritos: 2";
-            // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 609);
+            ClientSize = new Size(800, 450);
             Controls.Add(pnlConteudo);
             Controls.Add(panel1);
             Name = "FormPrincipal";
@@ -244,7 +222,5 @@
         private Button btnSairLogin;
         private Button button7;
         private Button button1;
-        private Label label4;
-        private Label label3;
     }
 }

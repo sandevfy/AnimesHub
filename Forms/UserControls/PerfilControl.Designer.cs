@@ -33,7 +33,7 @@
             button1 = new Button();
             label2 = new Label();
             textBox1 = new TextBox();
-            txtUserLogin = new TextBox();
+            textBox2 = new TextBox();
             label3 = new Label();
             textBox3 = new TextBox();
             label4 = new Label();
@@ -42,13 +42,7 @@
             textBox5 = new TextBox();
             label6 = new Label();
             button2 = new Button();
-            txtIdPerfilEditar = new TextBox();
-            label7 = new Label();
-            button3 = new Button();
-            button4 = new Button();
-            pnlAdmEditarId = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            pnlAdmEditarId.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -96,12 +90,12 @@
             textBox1.Size = new Size(232, 23);
             textBox1.TabIndex = 4;
             // 
-            // txtUserLogin
+            // textBox2
             // 
-            txtUserLogin.Location = new Point(141, 162);
-            txtUserLogin.Name = "txtUserLogin";
-            txtUserLogin.Size = new Size(232, 23);
-            txtUserLogin.TabIndex = 6;
+            textBox2.Location = new Point(141, 162);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(232, 23);
+            textBox2.TabIndex = 6;
             // 
             // label3
             // 
@@ -175,63 +169,11 @@
             button2.Text = "Salvar Perfil";
             button2.UseVisualStyleBackColor = true;
             // 
-            // txtIdPerfilEditar
-            // 
-            txtIdPerfilEditar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtIdPerfilEditar.Location = new Point(80, 133);
-            txtIdPerfilEditar.Name = "txtIdPerfilEditar";
-            txtIdPerfilEditar.Size = new Size(79, 23);
-            txtIdPerfilEditar.TabIndex = 15;
-            // 
-            // label7
-            // 
-            label7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label7.AutoSize = true;
-            label7.Font = new Font("Arial Black", 12F, FontStyle.Bold);
-            label7.Location = new Point(21, 133);
-            label7.Name = "label7";
-            label7.Size = new Size(33, 23);
-            label7.TabIndex = 14;
-            label7.Text = "ID:";
-            // 
-            // button3
-            // 
-            button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button3.Location = new Point(80, 161);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 16;
-            button3.Text = "Buscar";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(379, 162);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 17;
-            button4.Text = "Solicitar";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
-            // pnlAdmEditarId
-            // 
-            pnlAdmEditarId.Controls.Add(txtIdPerfilEditar);
-            pnlAdmEditarId.Controls.Add(label7);
-            pnlAdmEditarId.Controls.Add(button3);
-            pnlAdmEditarId.Dock = DockStyle.Right;
-            pnlAdmEditarId.Location = new Point(523, 0);
-            pnlAdmEditarId.Name = "pnlAdmEditarId";
-            pnlAdmEditarId.Size = new Size(183, 491);
-            pnlAdmEditarId.TabIndex = 18;
-            // 
             // PerfilControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            Controls.Add(pnlAdmEditarId);
-            Controls.Add(button4);
             Controls.Add(button2);
             Controls.Add(textBox5);
             Controls.Add(label6);
@@ -239,7 +181,7 @@
             Controls.Add(label5);
             Controls.Add(textBox3);
             Controls.Add(label4);
-            Controls.Add(txtUserLogin);
+            Controls.Add(textBox2);
             Controls.Add(label3);
             Controls.Add(textBox1);
             Controls.Add(label2);
@@ -248,10 +190,7 @@
             Controls.Add(label1);
             Name = "PerfilControl";
             Size = new Size(706, 491);
-            Load += PerfilControl_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            pnlAdmEditarId.ResumeLayout(false);
-            pnlAdmEditarId.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -263,7 +202,7 @@
         private Button button1;
         private Label label2;
         private TextBox textBox1;
-        private TextBox txtUserLogin;
+        private TextBox textBox2;
         private Label label3;
         private TextBox textBox3;
         private Label label4;
@@ -272,10 +211,5 @@
         private TextBox textBox5;
         private Label label6;
         private Button button2;
-        private TextBox txtIdPerfilEditar;
-        private Label label7;
-        private Button button3;
-        private Button button4;
-        private Panel pnlAdmEditarId;
     }
 }

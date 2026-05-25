@@ -267,7 +267,6 @@
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
-            Load += Login_Load;
             pnlLogin.ResumeLayout(false);
             pnlLogin.PerformLayout();
             pnlCadastrar.ResumeLayout(false);
