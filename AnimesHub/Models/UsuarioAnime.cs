@@ -2,7 +2,7 @@
 
 namespace AnimesHub.Models
 {
-    internal class UsuarioAnime
+    public class UsuarioAnime
     {
         public int UsuarioId { get; set; }
         public Usuario Usuario { get; set; }

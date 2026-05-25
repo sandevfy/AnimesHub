@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnimesHub.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,11 @@ namespace AnimesHub.Forms
 {
     public partial class FormPrincipal : Form
     {
-        public FormPrincipal()
+        private Usuario _usuarioLongado;
+        public FormPrincipal(Usuario usuario)
         {
             InitializeComponent();
+            _usuarioLongado = usuario;
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)

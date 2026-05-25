@@ -28,21 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
+            pnlLancamentos = new Panel();
             flpLancamentos = new FlowLayoutPanel();
             label1 = new Label();
-            panel1.SuspendLayout();
+            pnlAcompanhando = new Panel();
+            flpAcompanhando = new FlowLayoutPanel();
+            label2 = new Label();
+            pnlLancamentos.SuspendLayout();
+            pnlAcompanhando.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // pnlLancamentos
             // 
-            panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(flpLancamentos);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(10, 10);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(732, 350);
-            panel1.TabIndex = 0;
+            pnlLancamentos.BackColor = Color.Transparent;
+            pnlLancamentos.Controls.Add(flpLancamentos);
+            pnlLancamentos.Controls.Add(label1);
+            pnlLancamentos.Dock = DockStyle.Top;
+            pnlLancamentos.Location = new Point(0, 0);
+            pnlLancamentos.Name = "pnlLancamentos";
+            pnlLancamentos.Size = new Size(707, 350);
+            pnlLancamentos.TabIndex = 0;
             // 
             // flpLancamentos
             // 
@@ -50,7 +55,7 @@
             flpLancamentos.Dock = DockStyle.Fill;
             flpLancamentos.Location = new Point(0, 27);
             flpLancamentos.Name = "flpLancamentos";
-            flpLancamentos.Size = new Size(732, 323);
+            flpLancamentos.Size = new Size(707, 323);
             flpLancamentos.TabIndex = 1;
             flpLancamentos.WrapContents = false;
             // 
@@ -66,24 +71,63 @@
             label1.TabIndex = 0;
             label1.Text = "Lançamentos";
             // 
+            // pnlAcompanhando
+            // 
+            pnlAcompanhando.BackColor = Color.Transparent;
+            pnlAcompanhando.Controls.Add(flpAcompanhando);
+            pnlAcompanhando.Controls.Add(label2);
+            pnlAcompanhando.Dock = DockStyle.Top;
+            pnlAcompanhando.Location = new Point(0, 350);
+            pnlAcompanhando.Name = "pnlAcompanhando";
+            pnlAcompanhando.Size = new Size(707, 350);
+            pnlAcompanhando.TabIndex = 2;
+            // 
+            // flpAcompanhando
+            // 
+            flpAcompanhando.AutoScroll = true;
+            flpAcompanhando.Dock = DockStyle.Fill;
+            flpAcompanhando.Location = new Point(0, 27);
+            flpAcompanhando.Name = "flpAcompanhando";
+            flpAcompanhando.Size = new Size(707, 323);
+            flpAcompanhando.TabIndex = 1;
+            flpAcompanhando.WrapContents = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Dock = DockStyle.Top;
+            label2.Font = new Font("Arial Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(0, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(176, 27);
+            label2.TabIndex = 0;
+            label2.Text = "Acompanhando";
+            // 
             // HomeControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            Controls.Add(panel1);
+            Controls.Add(pnlAcompanhando);
+            Controls.Add(pnlLancamentos);
             Name = "HomeControl";
-            Size = new Size(755, 499);
+            Size = new Size(707, 933);
             Load += HomeControl_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            pnlLancamentos.ResumeLayout(false);
+            pnlLancamentos.PerformLayout();
+            pnlAcompanhando.ResumeLayout(false);
+            pnlAcompanhando.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel pnlLancamentos;
         private Label label1;
         private FlowLayoutPanel flpLancamentos;
+        private Panel pnlAcompanhando;
+        private FlowLayoutPanel flpAcompanhando;
+        private Label label2;
     }
 }

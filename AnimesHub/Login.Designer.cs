@@ -40,11 +40,11 @@
             pnlCadastrar = new Panel();
             lblJaPossuiConta = new LinkLabel();
             btnCadastrar = new Button();
-            textBox5 = new TextBox();
+            txtSenhaCadastro = new TextBox();
             label9 = new Label();
-            textBox3 = new TextBox();
+            txtEmailCadastro = new TextBox();
             label7 = new Label();
-            textBox2 = new TextBox();
+            txtUserCadastro = new TextBox();
             label5 = new Label();
             label4 = new Label();
             pnlLogin.SuspendLayout();
@@ -155,11 +155,11 @@
             // 
             pnlCadastrar.Controls.Add(lblJaPossuiConta);
             pnlCadastrar.Controls.Add(btnCadastrar);
-            pnlCadastrar.Controls.Add(textBox5);
+            pnlCadastrar.Controls.Add(txtSenhaCadastro);
             pnlCadastrar.Controls.Add(label9);
-            pnlCadastrar.Controls.Add(textBox3);
+            pnlCadastrar.Controls.Add(txtEmailCadastro);
             pnlCadastrar.Controls.Add(label7);
-            pnlCadastrar.Controls.Add(textBox2);
+            pnlCadastrar.Controls.Add(txtUserCadastro);
             pnlCadastrar.Controls.Add(label5);
             pnlCadastrar.Controls.Add(label4);
             pnlCadastrar.Dock = DockStyle.Fill;
@@ -191,12 +191,12 @@
             btnCadastrar.UseVisualStyleBackColor = true;
             btnCadastrar.Click += btnCadastrar_Click;
             // 
-            // textBox5
+            // txtSenhaCadastro
             // 
-            textBox5.Location = new Point(44, 216);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(208, 23);
-            textBox5.TabIndex = 11;
+            txtSenhaCadastro.Location = new Point(44, 216);
+            txtSenhaCadastro.Name = "txtSenhaCadastro";
+            txtSenhaCadastro.Size = new Size(208, 23);
+            txtSenhaCadastro.TabIndex = 11;
             // 
             // label9
             // 
@@ -209,12 +209,12 @@
             label9.TabIndex = 10;
             label9.Text = "Senha:";
             // 
-            // textBox3
+            // txtEmailCadastro
             // 
-            textBox3.Location = new Point(44, 164);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(208, 23);
-            textBox3.TabIndex = 9;
+            txtEmailCadastro.Location = new Point(44, 164);
+            txtEmailCadastro.Name = "txtEmailCadastro";
+            txtEmailCadastro.Size = new Size(208, 23);
+            txtEmailCadastro.TabIndex = 9;
             // 
             // label7
             // 
@@ -227,12 +227,12 @@
             label7.TabIndex = 8;
             label7.Text = "Email:";
             // 
-            // textBox2
+            // txtUserCadastro
             // 
-            textBox2.Location = new Point(44, 112);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(208, 23);
-            textBox2.TabIndex = 5;
+            txtUserCadastro.Location = new Point(44, 112);
+            txtUserCadastro.Name = "txtUserCadastro";
+            txtUserCadastro.Size = new Size(208, 23);
+            txtUserCadastro.TabIndex = 5;
             // 
             // label5
             // 
@@ -267,6 +267,7 @@
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            Load += Login_Load;
             pnlLogin.ResumeLayout(false);
             pnlLogin.PerformLayout();
             pnlCadastrar.ResumeLayout(false);
@@ -286,13 +287,13 @@
         private Label label2;
         private Button btnLoginCadastrar;
         private Panel pnlCadastrar;
-        private TextBox textBox2;
+        private TextBox txtUserCadastro;
         private Label label5;
         private Label label4;
         private Button btnCadastrar;
-        private TextBox textBox5;
+        private TextBox txtSenhaCadastro;
         private Label label9;
-        private TextBox textBox3;
+        private TextBox txtEmailCadastro;
         private Label label7;
         private LinkLabel lblJaPossuiConta;
     }

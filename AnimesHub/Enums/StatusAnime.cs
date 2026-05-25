@@ -1,6 +1,6 @@
 ﻿namespace AnimesHub.Enums
 {
-    internal enum StatusAnime
+    public enum StatusAnime
     {
         ParaAssistir, //Ainda não começou.
         Assistindo, // Anime completo que está assistindo.

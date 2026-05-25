@@ -33,7 +33,7 @@
             button1 = new Button();
             label2 = new Label();
             textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtBoxUser = new TextBox();
             label3 = new Label();
             textBox3 = new TextBox();
             label4 = new Label();
@@ -41,8 +41,14 @@
             label5 = new Label();
             textBox5 = new TextBox();
             label6 = new Label();
-            button2 = new Button();
+            btnSalvarPerfil = new Button();
+            pnlUserEditAdm = new Panel();
+            label7 = new Label();
+            textBox6 = new TextBox();
+            btnBuscarEditUser = new Button();
+            btnSolicitarEditUser = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pnlUserEditAdm.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -90,12 +96,12 @@
             textBox1.Size = new Size(232, 23);
             textBox1.TabIndex = 4;
             // 
-            // textBox2
+            // txtBoxUser
             // 
-            textBox2.Location = new Point(141, 162);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(232, 23);
-            textBox2.TabIndex = 6;
+            txtBoxUser.Location = new Point(141, 162);
+            txtBoxUser.Name = "txtBoxUser";
+            txtBoxUser.Size = new Size(232, 23);
+            txtBoxUser.TabIndex = 6;
             // 
             // label3
             // 
@@ -159,29 +165,82 @@
             label6.TabIndex = 11;
             label6.Text = "Senha:";
             // 
-            // button2
+            // btnSalvarPerfil
             // 
-            button2.Anchor = AnchorStyles.Bottom;
-            button2.Location = new Point(303, 442);
-            button2.Name = "button2";
-            button2.Size = new Size(105, 36);
-            button2.TabIndex = 13;
-            button2.Text = "Salvar Perfil";
-            button2.UseVisualStyleBackColor = true;
+            btnSalvarPerfil.Anchor = AnchorStyles.Bottom;
+            btnSalvarPerfil.Location = new Point(303, 442);
+            btnSalvarPerfil.Name = "btnSalvarPerfil";
+            btnSalvarPerfil.Size = new Size(105, 36);
+            btnSalvarPerfil.TabIndex = 13;
+            btnSalvarPerfil.Text = "Salvar Perfil";
+            btnSalvarPerfil.UseVisualStyleBackColor = true;
+            btnSalvarPerfil.Click += btnSalvarPerfil_Click;
+            // 
+            // pnlUserEditAdm
+            // 
+            pnlUserEditAdm.Controls.Add(label7);
+            pnlUserEditAdm.Controls.Add(textBox6);
+            pnlUserEditAdm.Controls.Add(btnBuscarEditUser);
+            pnlUserEditAdm.Dock = DockStyle.Right;
+            pnlUserEditAdm.Location = new Point(574, 0);
+            pnlUserEditAdm.Name = "pnlUserEditAdm";
+            pnlUserEditAdm.Size = new Size(132, 491);
+            pnlUserEditAdm.TabIndex = 14;
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.Right;
+            label7.AutoSize = true;
+            label7.Font = new Font("Arial Black", 12F, FontStyle.Bold);
+            label7.Location = new Point(25, 159);
+            label7.Name = "label7";
+            label7.Size = new Size(83, 23);
+            label7.TabIndex = 16;
+            label7.Text = "Usuario:";
+            // 
+            // textBox6
+            // 
+            textBox6.Anchor = AnchorStyles.Right;
+            textBox6.Location = new Point(25, 188);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(83, 23);
+            textBox6.TabIndex = 17;
+            // 
+            // btnBuscarEditUser
+            // 
+            btnBuscarEditUser.Anchor = AnchorStyles.Right;
+            btnBuscarEditUser.Location = new Point(25, 216);
+            btnBuscarEditUser.Name = "btnBuscarEditUser";
+            btnBuscarEditUser.Size = new Size(83, 23);
+            btnBuscarEditUser.TabIndex = 18;
+            btnBuscarEditUser.Text = "Buscar";
+            btnBuscarEditUser.UseVisualStyleBackColor = true;
+            // 
+            // btnSolicitarEditUser
+            // 
+            btnSolicitarEditUser.Location = new Point(379, 162);
+            btnSolicitarEditUser.Name = "btnSolicitarEditUser";
+            btnSolicitarEditUser.Size = new Size(75, 23);
+            btnSolicitarEditUser.TabIndex = 15;
+            btnSolicitarEditUser.Text = "Solicitar";
+            btnSolicitarEditUser.UseVisualStyleBackColor = true;
+            btnSolicitarEditUser.Click += btnSolicitarEditUser_Click;
             // 
             // PerfilControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            Controls.Add(button2);
+            Controls.Add(btnSolicitarEditUser);
+            Controls.Add(pnlUserEditAdm);
+            Controls.Add(btnSalvarPerfil);
             Controls.Add(textBox5);
             Controls.Add(label6);
             Controls.Add(textBox4);
             Controls.Add(label5);
             Controls.Add(textBox3);
             Controls.Add(label4);
-            Controls.Add(textBox2);
+            Controls.Add(txtBoxUser);
             Controls.Add(label3);
             Controls.Add(textBox1);
             Controls.Add(label2);
@@ -190,7 +249,10 @@
             Controls.Add(label1);
             Name = "PerfilControl";
             Size = new Size(706, 491);
+            Load += PerfilControl_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            pnlUserEditAdm.ResumeLayout(false);
+            pnlUserEditAdm.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -202,7 +264,7 @@
         private Button button1;
         private Label label2;
         private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtBoxUser;
         private Label label3;
         private TextBox textBox3;
         private Label label4;
@@ -210,6 +272,11 @@
         private Label label5;
         private TextBox textBox5;
         private Label label6;
-        private Button button2;
+        private Button btnSalvarPerfil;
+        private Panel pnlUserEditAdm;
+        private Label label7;
+        private TextBox textBox6;
+        private Button btnBuscarEditUser;
+        private Button btnSolicitarEditUser;
     }
 }

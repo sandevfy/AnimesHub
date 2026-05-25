@@ -1,10 +1,14 @@
+using AnimesHub.Data;
+using AnimesHub.Enums;
 using AnimesHub.Forms;
+using AnimesHub.Models;
 using System.Drawing.Drawing2D;
 
 namespace AnimesHub
 {
     public partial class Login : Form
     {
+        private int _usuarioLongado;
         public Login()
         {
             InitializeComponent();
@@ -39,36 +43,61 @@ namespace AnimesHub
 
         private void btnLoginEntrar_Click(object sender, EventArgs e)
         {
-            if (txtUserLogin.Text == "adm" && txtUserSenha.Text == "adm")
+            using var db = new AppDbContext();
+
+            var usuario = db.Usuarios.FirstOrDefault(x => x.UserLogin == txtUserLogin.Text && x.Password == txtUserSenha.Text);
+
+            if (usuario == null)
             {
-                var formPrincipal = new FormPrincipal();
+                MessageBox.Show("Usuario ou Senha Errada.");
+                return;
+            }
 
-                this.Hide();
+            var formPrincipal = new FormPrincipal(usuario);
 
-                DialogResult resultado = formPrincipal.ShowDialog();
+            this.Hide();
 
-                if (resultado == DialogResult.OK)
-                {
-                    // Clicou em Sair
-                    this.Show();
-                }
-                else
-                {
-                    // Clicou no X
-                    Application.Exit();
-                }
+            DialogResult resultado = formPrincipal.ShowDialog();
 
-
+            if (resultado == DialogResult.OK)
+            {
+                // Clicou em Sair
+                this.Show();
             }
             else
             {
-                MessageBox.Show("Conta Não Autorizada!");
+                // Clicou no X
+                Application.Exit();
             }
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Cadastramento em desenvolvimento");
+
+            using var db = new AppDbContext();
+
+            var usuario = new Usuario
+            {
+                UserLogin = txtUserCadastro.Text,
+                Email = txtEmailCadastro.Text,
+                Password = txtSenhaCadastro.Text,
+                Role = Enums.UserRole.User
+            };
+            if(!db.Usuarios.Any(x => x.Role == Enums.UserRole.Admin))
+            {
+                usuario.Role = Enums.UserRole.Admin;
+            }
+
+            db.Usuarios.Add(usuario);
+            db.SaveChanges();
+
+            MessageBox.Show("Cadastrado com Sucesso!");
+            MostrarLogin();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
