@@ -11,7 +11,6 @@ namespace AnimesHub.Forms
 {
     public partial class HomeControl : UserControl
     {
-        private int Lista = 20;
         public HomeControl()
         {
             InitializeComponent();
@@ -19,14 +18,6 @@ namespace AnimesHub.Forms
 
         private void LoadCards()
         {
-            for (int i = 0; i < Lista; i++)
-            {
-                AnimeCardControl anim = new AnimeCardControl();
-
-                anim.SetAnime();
-                flpLancamentos.Controls.Add(anim);
-            }
-
             for (int i = 0; i < 5; i++)
             {
                 AnimeCardControl anim = new AnimeCardControl();

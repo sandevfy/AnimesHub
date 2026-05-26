@@ -20,6 +20,7 @@ namespace AnimesHub.Forms
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
+            LoadUserPerfil();
             pnlConteudo.Controls.Clear();
 
             HomeControl home = new HomeControl();
@@ -27,7 +28,10 @@ namespace AnimesHub.Forms
 
             pnlConteudo.Controls.Add(home);
         }
-
+        private void LoadUserPerfil()
+        {
+            lblNomeUsuarioLongado.Text = _usuarioLongado.Name;
+        }
         private void btnUcHome_Click(object sender, EventArgs e)
         {
             pnlConteudo.Controls.Clear();
@@ -42,7 +46,7 @@ namespace AnimesHub.Forms
         {
             pnlConteudo.Controls.Clear();
 
-            PerfilControl perfil = new PerfilControl();
+            PerfilControl perfil = new PerfilControl(_usuarioLongado);
             perfil.Dock = DockStyle.Fill;
 
             pnlConteudo.Controls.Add(perfil);

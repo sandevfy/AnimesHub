@@ -32,16 +32,17 @@
             btnUcHome = new Button();
             btnUcPerfil = new Button();
             panel1 = new Panel();
-            button1 = new Button();
             btnSairLogin = new Button();
             button7 = new Button();
             button6 = new Button();
             button5 = new Button();
             button4 = new Button();
             button2 = new Button();
-            label2 = new Label();
+            lblNomeUsuarioLongado = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            btnAdicionarAnimes = new Button();
+            btnSolicitarAnime = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -52,7 +53,7 @@
             pnlConteudo.Dock = DockStyle.Fill;
             pnlConteudo.Location = new Point(133, 0);
             pnlConteudo.Name = "pnlConteudo";
-            pnlConteudo.Size = new Size(667, 450);
+            pnlConteudo.Size = new Size(914, 739);
             pnlConteudo.TabIndex = 0;
             // 
             // btnUcHome
@@ -77,14 +78,15 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnSolicitarAnime);
+            panel1.Controls.Add(btnAdicionarAnimes);
             panel1.Controls.Add(btnSairLogin);
             panel1.Controls.Add(button7);
             panel1.Controls.Add(button6);
             panel1.Controls.Add(button5);
             panel1.Controls.Add(button4);
             panel1.Controls.Add(button2);
-            panel1.Controls.Add(label2);
+            panel1.Controls.Add(lblNomeUsuarioLongado);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(btnUcPerfil);
             panel1.Controls.Add(btnUcHome);
@@ -92,22 +94,13 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(133, 450);
+            panel1.Size = new Size(133, 739);
             panel1.TabIndex = 4;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(12, 320);
-            button1.Name = "button1";
-            button1.Size = new Size(115, 23);
-            button1.TabIndex = 11;
-            button1.Text = "Lançamentos";
-            button1.UseVisualStyleBackColor = true;
             // 
             // btnSairLogin
             // 
             btnSairLogin.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnSairLogin.Location = new Point(12, 415);
+            btnSairLogin.Location = new Point(12, 704);
             btnSairLogin.Name = "btnSairLogin";
             btnSairLogin.Size = new Size(115, 23);
             btnSairLogin.TabIndex = 10;
@@ -117,7 +110,7 @@
             // 
             // button7
             // 
-            button7.Location = new Point(12, 291);
+            button7.Location = new Point(12, 204);
             button7.Name = "button7";
             button7.Size = new Size(115, 23);
             button7.TabIndex = 9;
@@ -126,7 +119,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(12, 262);
+            button6.Location = new Point(12, 291);
             button6.Name = "button6";
             button6.Size = new Size(115, 23);
             button6.TabIndex = 8;
@@ -135,7 +128,7 @@
             // 
             // button5
             // 
-            button5.Location = new Point(12, 233);
+            button5.Location = new Point(12, 262);
             button5.Name = "button5";
             button5.Size = new Size(115, 23);
             button5.TabIndex = 7;
@@ -144,7 +137,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(12, 204);
+            button4.Location = new Point(12, 233);
             button4.Name = "button4";
             button4.Size = new Size(115, 23);
             button4.TabIndex = 6;
@@ -160,14 +153,14 @@
             button2.Text = "Favoritos";
             button2.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // lblNomeUsuarioLongado
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(44, 81);
-            label2.Name = "label2";
-            label2.Size = new Size(40, 15);
-            label2.TabIndex = 4;
-            label2.Text = "Nome";
+            lblNomeUsuarioLongado.AutoSize = true;
+            lblNomeUsuarioLongado.Location = new Point(44, 81);
+            lblNomeUsuarioLongado.Name = "lblNomeUsuarioLongado";
+            lblNomeUsuarioLongado.Size = new Size(40, 15);
+            lblNomeUsuarioLongado.TabIndex = 4;
+            lblNomeUsuarioLongado.Text = "Nome";
             // 
             // label1
             // 
@@ -187,16 +180,34 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
+            // btnAdicionarAnimes
+            // 
+            btnAdicionarAnimes.Location = new Point(12, 675);
+            btnAdicionarAnimes.Name = "btnAdicionarAnimes";
+            btnAdicionarAnimes.Size = new Size(115, 23);
+            btnAdicionarAnimes.TabIndex = 11;
+            btnAdicionarAnimes.Text = "Adicionar Animes";
+            btnAdicionarAnimes.UseVisualStyleBackColor = true;
+            // 
+            // btnSolicitarAnime
+            // 
+            btnSolicitarAnime.Location = new Point(12, 320);
+            btnSolicitarAnime.Name = "btnSolicitarAnime";
+            btnSolicitarAnime.Size = new Size(115, 23);
+            btnSolicitarAnime.TabIndex = 12;
+            btnSolicitarAnime.Text = "Solicitar";
+            btnSolicitarAnime.UseVisualStyleBackColor = true;
+            // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1047, 739);
             Controls.Add(pnlConteudo);
             Controls.Add(panel1);
             Name = "FormPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormPrincipal";
+            Text = "Animes Hub";
             WindowState = FormWindowState.Maximized;
             Load += FormPrincipal_Load;
             panel1.ResumeLayout(false);
@@ -215,12 +226,13 @@
         private Label label1;
         private Panel panel2;
         private Button button2;
-        private Label label2;
+        private Label lblNomeUsuarioLongado;
         private Button button6;
         private Button button5;
         private Button button4;
         private Button btnSairLogin;
         private Button button7;
-        private Button button1;
+        private Button btnSolicitarAnime;
+        private Button btnAdicionarAnimes;
     }
 }

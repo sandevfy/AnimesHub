@@ -28,142 +28,117 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            pictureBox1 = new PictureBox();
-            button1 = new Button();
-            label2 = new Label();
-            textBox1 = new TextBox();
-            txtBoxUser = new TextBox();
-            label3 = new Label();
-            textBox3 = new TextBox();
-            label4 = new Label();
-            textBox4 = new TextBox();
-            label5 = new Label();
-            textBox5 = new TextBox();
-            label6 = new Label();
-            btnSalvarPerfil = new Button();
-            pnlUserEditAdm = new Panel();
-            label7 = new Label();
-            textBox6 = new TextBox();
-            btnBuscarEditUser = new Button();
             btnSolicitarEditUser = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            btnBuscarEditUser = new Button();
+            txtIdUserEditBuscar = new TextBox();
+            label7 = new Label();
+            pnlUserEditAdm = new Panel();
+            pnlPermissoes = new Panel();
+            label8 = new Label();
+            btnExcluirUsuario = new Button();
+            btnSalvarPerfil = new Button();
+            label6 = new Label();
+            txtSenhaUserEdit = new TextBox();
+            label5 = new Label();
+            txtEmailUserEdit = new TextBox();
+            label4 = new Label();
+            txtIdadeUserEdit = new TextBox();
+            label3 = new Label();
+            txtBoxUserEdit = new TextBox();
+            txtNameUserEdit = new TextBox();
+            label2 = new Label();
+            button1 = new Button();
+            pictureBox1 = new PictureBox();
+            label1 = new Label();
+            cmbRole = new ComboBox();
             pnlUserEditAdm.SuspendLayout();
+            pnlPermissoes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // btnSolicitarEditUser
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial Black", 12F, FontStyle.Bold);
-            label1.Location = new Point(148, 20);
-            label1.Name = "label1";
-            label1.Size = new Size(202, 23);
-            label1.TabIndex = 0;
-            label1.Text = "Nome do usuario aqui";
+            btnSolicitarEditUser.Location = new Point(379, 162);
+            btnSolicitarEditUser.Name = "btnSolicitarEditUser";
+            btnSolicitarEditUser.Size = new Size(75, 23);
+            btnSolicitarEditUser.TabIndex = 15;
+            btnSolicitarEditUser.Text = "Solicitar";
+            btnSolicitarEditUser.UseVisualStyleBackColor = true;
+            btnSolicitarEditUser.Click += btnSolicitarEditUser_Click;
             // 
-            // pictureBox1
+            // btnBuscarEditUser
             // 
-            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox1.Location = new Point(22, 20);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(102, 76);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            btnBuscarEditUser.Anchor = AnchorStyles.Right;
+            btnBuscarEditUser.Location = new Point(115, 216);
+            btnBuscarEditUser.Name = "btnBuscarEditUser";
+            btnBuscarEditUser.Size = new Size(83, 23);
+            btnBuscarEditUser.TabIndex = 18;
+            btnBuscarEditUser.Text = "Buscar";
+            btnBuscarEditUser.UseVisualStyleBackColor = true;
+            btnBuscarEditUser.Click += btnBuscarEditUser_Click;
             // 
-            // button1
+            // txtIdUserEditBuscar
             // 
-            button1.Location = new Point(148, 59);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 2;
-            button1.Text = "Editar foto";
-            button1.UseVisualStyleBackColor = true;
+            txtIdUserEditBuscar.Anchor = AnchorStyles.Right;
+            txtIdUserEditBuscar.Location = new Point(115, 188);
+            txtIdUserEditBuscar.Name = "txtIdUserEditBuscar";
+            txtIdUserEditBuscar.Size = new Size(83, 23);
+            txtIdUserEditBuscar.TabIndex = 17;
             // 
-            // label2
+            // label7
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Arial Black", 12F, FontStyle.Bold);
-            label2.Location = new Point(46, 133);
-            label2.Name = "label2";
-            label2.Size = new Size(66, 23);
-            label2.TabIndex = 3;
-            label2.Text = "Nome:";
+            label7.Anchor = AnchorStyles.Right;
+            label7.AutoSize = true;
+            label7.Font = new Font("Arial Black", 12F, FontStyle.Bold);
+            label7.Location = new Point(115, 159);
+            label7.Name = "label7";
+            label7.Size = new Size(83, 23);
+            label7.TabIndex = 16;
+            label7.Text = "Usuario:";
             // 
-            // textBox1
+            // pnlUserEditAdm
             // 
-            textBox1.Location = new Point(141, 133);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(232, 23);
-            textBox1.TabIndex = 4;
+            pnlUserEditAdm.Controls.Add(pnlPermissoes);
+            pnlUserEditAdm.Controls.Add(btnExcluirUsuario);
+            pnlUserEditAdm.Controls.Add(label7);
+            pnlUserEditAdm.Controls.Add(txtIdUserEditBuscar);
+            pnlUserEditAdm.Controls.Add(btnBuscarEditUser);
+            pnlUserEditAdm.Dock = DockStyle.Right;
+            pnlUserEditAdm.Location = new Point(484, 0);
+            pnlUserEditAdm.Name = "pnlUserEditAdm";
+            pnlUserEditAdm.Size = new Size(222, 491);
+            pnlUserEditAdm.TabIndex = 14;
             // 
-            // txtBoxUser
+            // pnlPermissoes
             // 
-            txtBoxUser.Location = new Point(141, 162);
-            txtBoxUser.Name = "txtBoxUser";
-            txtBoxUser.Size = new Size(232, 23);
-            txtBoxUser.TabIndex = 6;
+            pnlPermissoes.Controls.Add(cmbRole);
+            pnlPermissoes.Controls.Add(label8);
+            pnlPermissoes.Dock = DockStyle.Bottom;
+            pnlPermissoes.Location = new Point(0, 340);
+            pnlPermissoes.Name = "pnlPermissoes";
+            pnlPermissoes.Size = new Size(222, 151);
+            pnlPermissoes.TabIndex = 20;
             // 
-            // label3
+            // label8
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial Black", 12F, FontStyle.Bold);
-            label3.Location = new Point(46, 162);
-            label3.Name = "label3";
-            label3.Size = new Size(83, 23);
-            label3.TabIndex = 5;
-            label3.Text = "Usuario:";
+            label8.AutoSize = true;
+            label8.Font = new Font("Arial Black", 12F, FontStyle.Bold);
+            label8.Location = new Point(9, 21);
+            label8.Name = "label8";
+            label8.Size = new Size(100, 23);
+            label8.TabIndex = 16;
+            label8.Text = "User Role:";
             // 
-            // textBox3
+            // btnExcluirUsuario
             // 
-            textBox3.Location = new Point(141, 191);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(232, 23);
-            textBox3.TabIndex = 8;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Arial Black", 12F, FontStyle.Bold);
-            label4.Location = new Point(46, 191);
-            label4.Name = "label4";
-            label4.Size = new Size(65, 23);
-            label4.TabIndex = 7;
-            label4.Text = "Idade:";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(141, 220);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(232, 23);
-            textBox4.TabIndex = 10;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Arial Black", 12F, FontStyle.Bold);
-            label5.Location = new Point(46, 220);
-            label5.Name = "label5";
-            label5.Size = new Size(64, 23);
-            label5.TabIndex = 9;
-            label5.Text = "Email:";
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(141, 249);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(232, 23);
-            textBox5.TabIndex = 12;
-            textBox5.UseSystemPasswordChar = true;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Arial Black", 12F, FontStyle.Bold);
-            label6.Location = new Point(46, 249);
-            label6.Name = "label6";
-            label6.Size = new Size(71, 23);
-            label6.TabIndex = 11;
-            label6.Text = "Senha:";
+            btnExcluirUsuario.Anchor = AnchorStyles.Right;
+            btnExcluirUsuario.Location = new Point(96, 245);
+            btnExcluirUsuario.Name = "btnExcluirUsuario";
+            btnExcluirUsuario.Size = new Size(115, 23);
+            btnExcluirUsuario.TabIndex = 19;
+            btnExcluirUsuario.Text = "Excluir Usuario";
+            btnExcluirUsuario.UseVisualStyleBackColor = true;
+            btnExcluirUsuario.Click += btnExcluirUsuario_Click;
             // 
             // btnSalvarPerfil
             // 
@@ -176,55 +151,127 @@
             btnSalvarPerfil.UseVisualStyleBackColor = true;
             btnSalvarPerfil.Click += btnSalvarPerfil_Click;
             // 
-            // pnlUserEditAdm
+            // label6
             // 
-            pnlUserEditAdm.Controls.Add(label7);
-            pnlUserEditAdm.Controls.Add(textBox6);
-            pnlUserEditAdm.Controls.Add(btnBuscarEditUser);
-            pnlUserEditAdm.Dock = DockStyle.Right;
-            pnlUserEditAdm.Location = new Point(574, 0);
-            pnlUserEditAdm.Name = "pnlUserEditAdm";
-            pnlUserEditAdm.Size = new Size(132, 491);
-            pnlUserEditAdm.TabIndex = 14;
+            label6.AutoSize = true;
+            label6.Font = new Font("Arial Black", 12F, FontStyle.Bold);
+            label6.Location = new Point(46, 249);
+            label6.Name = "label6";
+            label6.Size = new Size(71, 23);
+            label6.TabIndex = 11;
+            label6.Text = "Senha:";
             // 
-            // label7
+            // txtSenhaUserEdit
             // 
-            label7.Anchor = AnchorStyles.Right;
-            label7.AutoSize = true;
-            label7.Font = new Font("Arial Black", 12F, FontStyle.Bold);
-            label7.Location = new Point(25, 159);
-            label7.Name = "label7";
-            label7.Size = new Size(83, 23);
-            label7.TabIndex = 16;
-            label7.Text = "Usuario:";
+            txtSenhaUserEdit.Location = new Point(141, 249);
+            txtSenhaUserEdit.Name = "txtSenhaUserEdit";
+            txtSenhaUserEdit.Size = new Size(232, 23);
+            txtSenhaUserEdit.TabIndex = 12;
+            txtSenhaUserEdit.UseSystemPasswordChar = true;
             // 
-            // textBox6
+            // label5
             // 
-            textBox6.Anchor = AnchorStyles.Right;
-            textBox6.Location = new Point(25, 188);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(83, 23);
-            textBox6.TabIndex = 17;
+            label5.AutoSize = true;
+            label5.Font = new Font("Arial Black", 12F, FontStyle.Bold);
+            label5.Location = new Point(46, 220);
+            label5.Name = "label5";
+            label5.Size = new Size(64, 23);
+            label5.TabIndex = 9;
+            label5.Text = "Email:";
             // 
-            // btnBuscarEditUser
+            // txtEmailUserEdit
             // 
-            btnBuscarEditUser.Anchor = AnchorStyles.Right;
-            btnBuscarEditUser.Location = new Point(25, 216);
-            btnBuscarEditUser.Name = "btnBuscarEditUser";
-            btnBuscarEditUser.Size = new Size(83, 23);
-            btnBuscarEditUser.TabIndex = 18;
-            btnBuscarEditUser.Text = "Buscar";
-            btnBuscarEditUser.UseVisualStyleBackColor = true;
+            txtEmailUserEdit.Location = new Point(141, 220);
+            txtEmailUserEdit.Name = "txtEmailUserEdit";
+            txtEmailUserEdit.Size = new Size(232, 23);
+            txtEmailUserEdit.TabIndex = 10;
             // 
-            // btnSolicitarEditUser
+            // label4
             // 
-            btnSolicitarEditUser.Location = new Point(379, 162);
-            btnSolicitarEditUser.Name = "btnSolicitarEditUser";
-            btnSolicitarEditUser.Size = new Size(75, 23);
-            btnSolicitarEditUser.TabIndex = 15;
-            btnSolicitarEditUser.Text = "Solicitar";
-            btnSolicitarEditUser.UseVisualStyleBackColor = true;
-            btnSolicitarEditUser.Click += btnSolicitarEditUser_Click;
+            label4.AutoSize = true;
+            label4.Font = new Font("Arial Black", 12F, FontStyle.Bold);
+            label4.Location = new Point(46, 191);
+            label4.Name = "label4";
+            label4.Size = new Size(65, 23);
+            label4.TabIndex = 7;
+            label4.Text = "Idade:";
+            // 
+            // txtIdadeUserEdit
+            // 
+            txtIdadeUserEdit.Location = new Point(141, 191);
+            txtIdadeUserEdit.Name = "txtIdadeUserEdit";
+            txtIdadeUserEdit.Size = new Size(232, 23);
+            txtIdadeUserEdit.TabIndex = 8;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial Black", 12F, FontStyle.Bold);
+            label3.Location = new Point(46, 162);
+            label3.Name = "label3";
+            label3.Size = new Size(83, 23);
+            label3.TabIndex = 5;
+            label3.Text = "Usuario:";
+            // 
+            // txtBoxUserEdit
+            // 
+            txtBoxUserEdit.Location = new Point(141, 162);
+            txtBoxUserEdit.Name = "txtBoxUserEdit";
+            txtBoxUserEdit.Size = new Size(232, 23);
+            txtBoxUserEdit.TabIndex = 6;
+            // 
+            // txtNameUserEdit
+            // 
+            txtNameUserEdit.Location = new Point(141, 133);
+            txtNameUserEdit.Name = "txtNameUserEdit";
+            txtNameUserEdit.Size = new Size(232, 23);
+            txtNameUserEdit.TabIndex = 4;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial Black", 12F, FontStyle.Bold);
+            label2.Location = new Point(46, 133);
+            label2.Name = "label2";
+            label2.Size = new Size(66, 23);
+            label2.TabIndex = 3;
+            label2.Text = "Nome:";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(148, 59);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 2;
+            button1.Text = "Editar foto";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox1.Location = new Point(22, 20);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(102, 76);
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial Black", 12F, FontStyle.Bold);
+            label1.Location = new Point(148, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(202, 23);
+            label1.TabIndex = 0;
+            label1.Text = "Nome do usuario aqui";
+            // 
+            // cmbRole
+            // 
+            cmbRole.FormattingEnabled = true;
+            cmbRole.Location = new Point(115, 21);
+            cmbRole.Name = "cmbRole";
+            cmbRole.Size = new Size(96, 23);
+            cmbRole.TabIndex = 17;
             // 
             // PerfilControl
             // 
@@ -234,15 +281,15 @@
             Controls.Add(btnSolicitarEditUser);
             Controls.Add(pnlUserEditAdm);
             Controls.Add(btnSalvarPerfil);
-            Controls.Add(textBox5);
+            Controls.Add(txtSenhaUserEdit);
             Controls.Add(label6);
-            Controls.Add(textBox4);
+            Controls.Add(txtEmailUserEdit);
             Controls.Add(label5);
-            Controls.Add(textBox3);
+            Controls.Add(txtIdadeUserEdit);
             Controls.Add(label4);
-            Controls.Add(txtBoxUser);
+            Controls.Add(txtBoxUserEdit);
             Controls.Add(label3);
-            Controls.Add(textBox1);
+            Controls.Add(txtNameUserEdit);
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(pictureBox1);
@@ -250,33 +297,39 @@
             Name = "PerfilControl";
             Size = new Size(706, 491);
             Load += PerfilControl_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             pnlUserEditAdm.ResumeLayout(false);
             pnlUserEditAdm.PerformLayout();
+            pnlPermissoes.ResumeLayout(false);
+            pnlPermissoes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private PictureBox pictureBox1;
-        private Button button1;
-        private Label label2;
-        private TextBox textBox1;
-        private TextBox txtBoxUser;
-        private Label label3;
-        private TextBox textBox3;
-        private Label label4;
-        private TextBox textBox4;
-        private Label label5;
-        private TextBox textBox5;
-        private Label label6;
-        private Button btnSalvarPerfil;
-        private Panel pnlUserEditAdm;
-        private Label label7;
-        private TextBox textBox6;
-        private Button btnBuscarEditUser;
         private Button btnSolicitarEditUser;
+        private Button btnBuscarEditUser;
+        private TextBox txtIdUserEditBuscar;
+        private Label label7;
+        private Panel pnlUserEditAdm;
+        private Button btnSalvarPerfil;
+        private Label label6;
+        private TextBox txtSenhaUserEdit;
+        private Label label5;
+        private TextBox txtEmailUserEdit;
+        private Label label4;
+        private TextBox txtIdadeUserEdit;
+        private Label label3;
+        private TextBox txtBoxUserEdit;
+        private TextBox txtNameUserEdit;
+        private Label label2;
+        private Button button1;
+        private PictureBox pictureBox1;
+        private Label label1;
+        private Button btnExcluirUsuario;
+        private Label label8;
+        private Panel pnlPermissoes;
+        private ComboBox cmbRole;
     }
 }

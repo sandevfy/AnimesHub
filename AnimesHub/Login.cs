@@ -79,6 +79,7 @@ namespace AnimesHub
             var usuario = new Usuario
             {
                 UserLogin = txtUserCadastro.Text,
+                Age = 1,
                 Email = txtEmailCadastro.Text,
                 Password = txtSenhaCadastro.Text,
                 Role = Enums.UserRole.User
