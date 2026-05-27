@@ -37,6 +37,8 @@
             // 
             // picCapaAnimCard
             // 
+            picCapaAnimCard.BackgroundImage = Properties.Resources.CapaAnimeTeste;
+            picCapaAnimCard.BackgroundImageLayout = ImageLayout.Stretch;
             picCapaAnimCard.BorderStyle = BorderStyle.FixedSingle;
             picCapaAnimCard.Location = new Point(10, 7);
             picCapaAnimCard.Name = "picCapaAnimCard";

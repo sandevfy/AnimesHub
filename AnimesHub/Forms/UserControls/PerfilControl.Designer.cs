@@ -34,6 +34,8 @@
             txtIdUserEditBuscar = new TextBox();
             label7 = new Label();
             pnlUserEditAdm = new Panel();
+            btnLimparUsers = new Button();
+            btnListarUsers = new Button();
             pnlPermissoes = new Panel();
             cmbRole = new ComboBox();
             label8 = new Label();
@@ -52,9 +54,17 @@
             button1 = new Button();
             picUserImage = new PictureBox();
             label1 = new Label();
+            pnlPerfil = new Panel();
+            pnlListarUsuarios = new Panel();
+            dgvListarUsers = new DataGridView();
+            panel1 = new Panel();
             pnlUserEditAdm.SuspendLayout();
             pnlPermissoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picUserImage).BeginInit();
+            pnlPerfil.SuspendLayout();
+            pnlListarUsuarios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvListarUsers).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // btnSolicitarEditUser
@@ -69,8 +79,8 @@
             // 
             // btnBuscarEditUser
             // 
-            btnBuscarEditUser.Anchor = AnchorStyles.Right;
-            btnBuscarEditUser.Location = new Point(115, 216);
+            btnBuscarEditUser.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnBuscarEditUser.Location = new Point(181, 19);
             btnBuscarEditUser.Name = "btnBuscarEditUser";
             btnBuscarEditUser.Size = new Size(83, 23);
             btnBuscarEditUser.TabIndex = 18;
@@ -80,18 +90,18 @@
             // 
             // txtIdUserEditBuscar
             // 
-            txtIdUserEditBuscar.Anchor = AnchorStyles.Right;
-            txtIdUserEditBuscar.Location = new Point(115, 188);
+            txtIdUserEditBuscar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            txtIdUserEditBuscar.Location = new Point(92, 20);
             txtIdUserEditBuscar.Name = "txtIdUserEditBuscar";
             txtIdUserEditBuscar.Size = new Size(83, 23);
             txtIdUserEditBuscar.TabIndex = 17;
             // 
             // label7
             // 
-            label7.Anchor = AnchorStyles.Right;
+            label7.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label7.AutoSize = true;
             label7.Font = new Font("Arial Black", 12F, FontStyle.Bold);
-            label7.Location = new Point(115, 159);
+            label7.Location = new Point(9, 20);
             label7.Name = "label7";
             label7.Size = new Size(83, 23);
             label7.TabIndex = 16;
@@ -99,25 +109,49 @@
             // 
             // pnlUserEditAdm
             // 
+            pnlUserEditAdm.Controls.Add(btnLimparUsers);
+            pnlUserEditAdm.Controls.Add(btnListarUsers);
             pnlUserEditAdm.Controls.Add(pnlPermissoes);
             pnlUserEditAdm.Controls.Add(btnExcluirUsuario);
             pnlUserEditAdm.Controls.Add(label7);
             pnlUserEditAdm.Controls.Add(txtIdUserEditBuscar);
             pnlUserEditAdm.Controls.Add(btnBuscarEditUser);
-            pnlUserEditAdm.Dock = DockStyle.Right;
-            pnlUserEditAdm.Location = new Point(484, 0);
+            pnlUserEditAdm.Dock = DockStyle.Bottom;
+            pnlUserEditAdm.Location = new Point(0, 438);
             pnlUserEditAdm.Name = "pnlUserEditAdm";
-            pnlUserEditAdm.Size = new Size(222, 491);
+            pnlUserEditAdm.Size = new Size(526, 320);
             pnlUserEditAdm.TabIndex = 14;
+            // 
+            // btnLimparUsers
+            // 
+            btnLimparUsers.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnLimparUsers.Location = new Point(130, 48);
+            btnLimparUsers.Name = "btnLimparUsers";
+            btnLimparUsers.Size = new Size(115, 23);
+            btnLimparUsers.TabIndex = 22;
+            btnLimparUsers.Text = "Limpar Users";
+            btnLimparUsers.UseVisualStyleBackColor = true;
+            btnLimparUsers.Click += btnLimparUsers_Click;
+            // 
+            // btnListarUsers
+            // 
+            btnListarUsers.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnListarUsers.Location = new Point(9, 49);
+            btnListarUsers.Name = "btnListarUsers";
+            btnListarUsers.Size = new Size(115, 23);
+            btnListarUsers.TabIndex = 21;
+            btnListarUsers.Text = "Listar Usuarios";
+            btnListarUsers.UseVisualStyleBackColor = true;
+            btnListarUsers.Click += btnListarUsers_Click;
             // 
             // pnlPermissoes
             // 
             pnlPermissoes.Controls.Add(cmbRole);
             pnlPermissoes.Controls.Add(label8);
             pnlPermissoes.Dock = DockStyle.Bottom;
-            pnlPermissoes.Location = new Point(0, 340);
+            pnlPermissoes.Location = new Point(0, 258);
             pnlPermissoes.Name = "pnlPermissoes";
-            pnlPermissoes.Size = new Size(222, 151);
+            pnlPermissoes.Size = new Size(526, 62);
             pnlPermissoes.TabIndex = 20;
             // 
             // cmbRole
@@ -140,8 +174,8 @@
             // 
             // btnExcluirUsuario
             // 
-            btnExcluirUsuario.Anchor = AnchorStyles.Right;
-            btnExcluirUsuario.Location = new Point(96, 245);
+            btnExcluirUsuario.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnExcluirUsuario.Location = new Point(411, 229);
             btnExcluirUsuario.Name = "btnExcluirUsuario";
             btnExcluirUsuario.Size = new Size(115, 23);
             btnExcluirUsuario.TabIndex = 19;
@@ -151,8 +185,8 @@
             // 
             // btnSalvarPerfil
             // 
-            btnSalvarPerfil.Anchor = AnchorStyles.Bottom;
-            btnSalvarPerfil.Location = new Point(303, 442);
+            btnSalvarPerfil.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnSalvarPerfil.Location = new Point(268, 320);
             btnSalvarPerfil.Name = "btnSalvarPerfil";
             btnSalvarPerfil.Size = new Size(105, 36);
             btnSalvarPerfil.TabIndex = 13;
@@ -233,6 +267,7 @@
             // 
             txtNameUserEdit.Location = new Point(141, 133);
             txtNameUserEdit.Name = "txtNameUserEdit";
+            txtNameUserEdit.PlaceholderText = "Guest";
             txtNameUserEdit.Size = new Size(232, 23);
             txtNameUserEdit.TabIndex = 4;
             // 
@@ -276,37 +311,80 @@
             label1.TabIndex = 0;
             label1.Text = "Nome do usuario aqui";
             // 
+            // pnlPerfil
+            // 
+            pnlPerfil.Controls.Add(btnSolicitarEditUser);
+            pnlPerfil.Controls.Add(btnSalvarPerfil);
+            pnlPerfil.Controls.Add(txtSenhaUserEdit);
+            pnlPerfil.Controls.Add(label6);
+            pnlPerfil.Controls.Add(txtEmailUserEdit);
+            pnlPerfil.Controls.Add(label5);
+            pnlPerfil.Controls.Add(txtIdadeUserEdit);
+            pnlPerfil.Controls.Add(label4);
+            pnlPerfil.Controls.Add(txtBoxUserEdit);
+            pnlPerfil.Controls.Add(label3);
+            pnlPerfil.Controls.Add(txtNameUserEdit);
+            pnlPerfil.Controls.Add(label2);
+            pnlPerfil.Controls.Add(button1);
+            pnlPerfil.Controls.Add(picUserImage);
+            pnlPerfil.Controls.Add(label1);
+            pnlPerfil.Dock = DockStyle.Top;
+            pnlPerfil.Location = new Point(0, 0);
+            pnlPerfil.Name = "pnlPerfil";
+            pnlPerfil.Size = new Size(526, 438);
+            pnlPerfil.TabIndex = 16;
+            // 
+            // pnlListarUsuarios
+            // 
+            pnlListarUsuarios.Controls.Add(dgvListarUsers);
+            pnlListarUsuarios.Dock = DockStyle.Fill;
+            pnlListarUsuarios.Location = new Point(526, 0);
+            pnlListarUsuarios.Name = "pnlListarUsuarios";
+            pnlListarUsuarios.Size = new Size(627, 758);
+            pnlListarUsuarios.TabIndex = 17;
+            // 
+            // dgvListarUsers
+            // 
+            dgvListarUsers.BackgroundColor = SystemColors.Control;
+            dgvListarUsers.BorderStyle = BorderStyle.None;
+            dgvListarUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvListarUsers.Dock = DockStyle.Fill;
+            dgvListarUsers.Location = new Point(0, 0);
+            dgvListarUsers.Name = "dgvListarUsers";
+            dgvListarUsers.Size = new Size(627, 758);
+            dgvListarUsers.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(pnlUserEditAdm);
+            panel1.Controls.Add(pnlPerfil);
+            panel1.Dock = DockStyle.Left;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(526, 758);
+            panel1.TabIndex = 1;
+            // 
             // PerfilControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            Controls.Add(btnSolicitarEditUser);
-            Controls.Add(pnlUserEditAdm);
-            Controls.Add(btnSalvarPerfil);
-            Controls.Add(txtSenhaUserEdit);
-            Controls.Add(label6);
-            Controls.Add(txtEmailUserEdit);
-            Controls.Add(label5);
-            Controls.Add(txtIdadeUserEdit);
-            Controls.Add(label4);
-            Controls.Add(txtBoxUserEdit);
-            Controls.Add(label3);
-            Controls.Add(txtNameUserEdit);
-            Controls.Add(label2);
-            Controls.Add(button1);
-            Controls.Add(picUserImage);
-            Controls.Add(label1);
+            Controls.Add(pnlListarUsuarios);
+            Controls.Add(panel1);
             Name = "PerfilControl";
-            Size = new Size(706, 491);
+            Size = new Size(1153, 758);
             Load += PerfilControl_Load;
             pnlUserEditAdm.ResumeLayout(false);
             pnlUserEditAdm.PerformLayout();
             pnlPermissoes.ResumeLayout(false);
             pnlPermissoes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picUserImage).EndInit();
+            pnlPerfil.ResumeLayout(false);
+            pnlPerfil.PerformLayout();
+            pnlListarUsuarios.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvListarUsers).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -334,5 +412,11 @@
         private Label label8;
         private Panel pnlPermissoes;
         private ComboBox cmbRole;
+        private Panel pnlPerfil;
+        private Panel pnlListarUsuarios;
+        private DataGridView dgvListarUsers;
+        private Button btnListarUsers;
+        private Button btnLimparUsers;
+        private Panel panel1;
     }
 }

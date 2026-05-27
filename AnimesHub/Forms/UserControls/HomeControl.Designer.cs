@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pnlAcompanhando = new Panel();
-            flpAcompanhando = new FlowLayoutPanel();
+            pnlAcompanhandoHome = new Panel();
+            flpAcompanhandoHome = new FlowLayoutPanel();
             label2 = new Label();
-            pnlAcompanhando.SuspendLayout();
+            pnlAcompanhandoHome.SuspendLayout();
             SuspendLayout();
             // 
-            // pnlAcompanhando
+            // pnlAcompanhandoHome
             // 
-            pnlAcompanhando.BackColor = Color.Transparent;
-            pnlAcompanhando.Controls.Add(flpAcompanhando);
-            pnlAcompanhando.Controls.Add(label2);
-            pnlAcompanhando.Dock = DockStyle.Top;
-            pnlAcompanhando.Location = new Point(0, 0);
-            pnlAcompanhando.Name = "pnlAcompanhando";
-            pnlAcompanhando.Size = new Size(707, 350);
-            pnlAcompanhando.TabIndex = 2;
+            pnlAcompanhandoHome.BackColor = Color.Transparent;
+            pnlAcompanhandoHome.Controls.Add(flpAcompanhandoHome);
+            pnlAcompanhandoHome.Controls.Add(label2);
+            pnlAcompanhandoHome.Dock = DockStyle.Top;
+            pnlAcompanhandoHome.Location = new Point(0, 0);
+            pnlAcompanhandoHome.Name = "pnlAcompanhandoHome";
+            pnlAcompanhandoHome.Size = new Size(707, 350);
+            pnlAcompanhandoHome.TabIndex = 2;
             // 
-            // flpAcompanhando
+            // flpAcompanhandoHome
             // 
-            flpAcompanhando.AutoScroll = true;
-            flpAcompanhando.Dock = DockStyle.Fill;
-            flpAcompanhando.Location = new Point(0, 27);
-            flpAcompanhando.Name = "flpAcompanhando";
-            flpAcompanhando.Size = new Size(707, 323);
-            flpAcompanhando.TabIndex = 1;
-            flpAcompanhando.WrapContents = false;
+            flpAcompanhandoHome.AutoScroll = true;
+            flpAcompanhandoHome.Dock = DockStyle.Fill;
+            flpAcompanhandoHome.Location = new Point(0, 27);
+            flpAcompanhandoHome.Name = "flpAcompanhandoHome";
+            flpAcompanhandoHome.Size = new Size(707, 323);
+            flpAcompanhandoHome.TabIndex = 1;
+            flpAcompanhandoHome.WrapContents = false;
             // 
             // label2
             // 
@@ -72,18 +72,18 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            Controls.Add(pnlAcompanhando);
+            Controls.Add(pnlAcompanhandoHome);
             Name = "HomeControl";
             Size = new Size(707, 933);
             Load += HomeControl_Load;
-            pnlAcompanhando.ResumeLayout(false);
-            pnlAcompanhando.PerformLayout();
+            pnlAcompanhandoHome.ResumeLayout(false);
+            pnlAcompanhandoHome.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-        private Panel pnlAcompanhando;
-        private FlowLayoutPanel flpAcompanhando;
+        private Panel pnlAcompanhandoHome;
+        private FlowLayoutPanel flpAcompanhandoHome;
         private Label label2;
     }
 }

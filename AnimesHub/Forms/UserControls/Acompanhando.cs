@@ -1,0 +1,51 @@
+﻿using AnimesHub.Data;
+using AnimesHub.Models;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace AnimesHub.Forms.UserControls
+{
+    public partial class Acompanhando : UserControl
+    {
+        private Usuario _usuarioLongado;
+        public Acompanhando(Usuario usuario)
+        {
+            InitializeComponent();
+            _usuarioLongado = usuario;
+        }
+
+        private void Acompanhando_Load(object sender, EventArgs e)
+        {
+            LoardCards();
+        }
+
+        private void LoardCards()
+        {
+            using (var context = new AppDbContext())
+            {
+                var animes = context.Animes.ToList();
+
+                foreach (var anime in animes)
+                {
+                    AnimeCardControl animeCard = new AnimeCardControl(anime, _usuarioLongado);
+
+                    animeCard.SetAnime();
+
+                    flpAcompanhando.Controls.Add(animeCard);
+                }
+            }
+        }
+
+        private void flpAcompanhando_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
+}

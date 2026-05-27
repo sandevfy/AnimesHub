@@ -18,10 +18,12 @@ namespace AnimesHub.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Studio = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Genero = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DateLancamento = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Temporadas = table.Column<int>(type: "int", nullable: false),
                     Episodios = table.Column<int>(type: "int", nullable: false),
-                    Descrition = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Sinopse = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

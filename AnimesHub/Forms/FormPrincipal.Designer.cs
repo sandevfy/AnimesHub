@@ -35,7 +35,7 @@
             btnSolicitarAnime = new Button();
             btnAdicionarAnimes = new Button();
             btnSairLogin = new Button();
-            button7 = new Button();
+            btnUcAcompanhando = new Button();
             button6 = new Button();
             button5 = new Button();
             button4 = new Button();
@@ -80,7 +80,7 @@
             panel1.Controls.Add(btnSolicitarAnime);
             panel1.Controls.Add(btnAdicionarAnimes);
             panel1.Controls.Add(btnSairLogin);
-            panel1.Controls.Add(button7);
+            panel1.Controls.Add(btnUcAcompanhando);
             panel1.Controls.Add(button6);
             panel1.Controls.Add(button5);
             panel1.Controls.Add(button4);
@@ -126,14 +126,15 @@
             btnSairLogin.UseVisualStyleBackColor = true;
             btnSairLogin.Click += btnSairLogin_Click;
             // 
-            // button7
+            // btnUcAcompanhando
             // 
-            button7.Location = new Point(12, 217);
-            button7.Name = "button7";
-            button7.Size = new Size(115, 23);
-            button7.TabIndex = 9;
-            button7.Text = "Acompanhando";
-            button7.UseVisualStyleBackColor = true;
+            btnUcAcompanhando.Location = new Point(12, 217);
+            btnUcAcompanhando.Name = "btnUcAcompanhando";
+            btnUcAcompanhando.Size = new Size(115, 23);
+            btnUcAcompanhando.TabIndex = 9;
+            btnUcAcompanhando.Text = "Acompanhando";
+            btnUcAcompanhando.UseVisualStyleBackColor = true;
+            btnUcAcompanhando.Click += btnUcAcompanhando_Click;
             // 
             // button6
             // 
@@ -183,7 +184,7 @@
             // 
             // picUserImage
             // 
-            picUserImage.BackgroundImage = Properties.Resources._310ed729c3b291fac2acb1d6cc897e74;
+            picUserImage.BackgroundImage = Properties.Resources.PerfilTeste;
             picUserImage.BackgroundImageLayout = ImageLayout.Stretch;
             picUserImage.BorderStyle = BorderStyle.FixedSingle;
             picUserImage.Location = new Point(28, 13);
@@ -224,7 +225,7 @@
         private Button button5;
         private Button button4;
         private Button btnSairLogin;
-        private Button button7;
+        private Button btnUcAcompanhando;
         private Button btnSolicitarAnime;
         private Button btnAdicionarAnimes;
     }

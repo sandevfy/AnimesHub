@@ -1,5 +1,4 @@
 using AnimesHub.Data;
-using AnimesHub.Enums;
 using AnimesHub.Forms;
 using AnimesHub.Models;
 using System.Drawing.Drawing2D;
@@ -15,9 +14,12 @@ namespace AnimesHub
         }
         private void Login_Load(object sender, EventArgs e)
         {
+            txtUserLogin.Text = "admin"; // temporario
+            txtUserSenha.Text = "2412"; // temporario
             GraphicsPath path = new GraphicsPath();
             path.AddEllipse(0, 0, picLoginPerfil.Width, picLoginPerfil.Height);
             picLoginPerfil.Region = new Region(path);
+
         }
         private void lblLoginEsqueceuSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -125,11 +127,14 @@ namespace AnimesHub
 
             if (string.IsNullOrWhiteSpace(senha) || senha.Length < 4)
                 erros.Add("A senha precisa ter no mínimo 4 caracteres.");
- 
-            if (!string.IsNullOrWhiteSpace(user) && db.Usuarios.Any(x => x.UserLogin == user))
+
+            var userExists = db.Usuarios.Any(x => x.UserLogin == user);
+            var emailExists = db.Usuarios.Any(x => x.Email == email);
+
+            if (!string.IsNullOrWhiteSpace(user) && userExists)
                 erros.Add("Nome de usuário já existe.");
  
-            if (!string.IsNullOrWhiteSpace(email) && db.Usuarios.Any(x => x.Email == email))
+            if (!string.IsNullOrWhiteSpace(email) && emailExists)
                 erros.Add("Email ja cadastrado");
 
             if (erros.Count > 0)

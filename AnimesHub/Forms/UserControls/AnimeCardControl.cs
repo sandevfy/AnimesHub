@@ -1,25 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
+﻿using AnimesHub.Models;
 
 namespace AnimesHub.Forms.UserControls
 {
     public partial class AnimeCardControl : UserControl
     {
-        public AnimeCardControl()
+        private Anime _anime;
+        private Usuario _usuarioLongado;
+        public AnimeCardControl(Anime anime, Usuario usuario)
         {
             InitializeComponent();
+            _anime = anime;
+            _usuarioLongado = usuario;
         }
-        public void SetAnime() // recebe Anime anime
+        public void SetAnime()
         {
-            lblNomeAnimeCard.Text = "Naruto";
-            lblDescAnimeCard.Text = "Um Anime muito bom cara, um mlk que quer ser Hokage mais que tudo.";
-            lblAnoAnimeCard.Text = "2000";
+            lblNomeAnimeCard.Text = _anime.Name;
+            lblDescAnimeCard.Text = _anime.Sinopse;
+            lblAnoAnimeCard.Text = _anime.DateLancamento.ToString("dd/MM/yyyy");
         }
+
         private void AnimeCardControl_Load(object sender, EventArgs e)
         {
 

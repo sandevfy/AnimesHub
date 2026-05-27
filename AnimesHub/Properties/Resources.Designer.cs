@@ -63,9 +63,9 @@ namespace AnimesHub.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1 {
+        internal static System.Drawing.Bitmap _1T {
             get {
-                object obj = ResourceManager.GetObject("1", resourceCulture);
+                object obj = ResourceManager.GetObject("1T", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace AnimesHub.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _11 {
+        internal static System.Drawing.Bitmap CapaAnimeTeste {
             get {
-                object obj = ResourceManager.GetObject("11", resourceCulture);
+                object obj = ResourceManager.GetObject("CapaAnimeTeste", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,29 +83,9 @@ namespace AnimesHub.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _2 {
+        internal static System.Drawing.Bitmap PerfilTeste {
             get {
-                object obj = ResourceManager.GetObject("2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _310ed729c3b291fac2acb1d6cc897e74 {
-            get {
-                object obj = ResourceManager.GetObject("310ed729c3b291fac2acb1d6cc897e74", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap b4e304a5c01ee34c19de63b2f839800a {
-            get {
-                object obj = ResourceManager.GetObject("b4e304a5c01ee34c19de63b2f839800a", resourceCulture);
+                object obj = ResourceManager.GetObject("PerfilTeste", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

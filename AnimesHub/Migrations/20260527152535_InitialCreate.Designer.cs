@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimesHub.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260526184540_InitialCreate")]
+    [Migration("20260527152535_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -36,14 +36,22 @@ namespace AnimesHub.Migrations
                     b.Property<DateTime>("DateLancamento")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Descrition")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("Episodios")
                         .HasColumnType("int");
 
+                    b.Property<string>("Genero")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sinopse")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Studio")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

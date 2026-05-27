@@ -68,7 +68,7 @@
             // 
             // picLoginPerfil
             // 
-            picLoginPerfil.BackgroundImage = (Image)resources.GetObject("picLoginPerfil.BackgroundImage");
+            picLoginPerfil.BackgroundImage = Properties.Resources.PerfilTeste;
             picLoginPerfil.BackgroundImageLayout = ImageLayout.Stretch;
             picLoginPerfil.BorderStyle = BorderStyle.FixedSingle;
             picLoginPerfil.Location = new Point(152, 89);

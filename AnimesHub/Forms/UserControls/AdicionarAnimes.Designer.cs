@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             pictureBox1 = new PictureBox();
-            button1 = new Button();
+            btnCarregarCapaAnime = new Button();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -37,42 +37,55 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            txtCriarAnimesSinopse = new TextBox();
+            txtCriarAnimesNome = new TextBox();
+            txtCriarAnimesEpisodios = new TextBox();
+            txtCriarAnimesTemporadas = new TextBox();
+            txtCriarAnimesGenero = new TextBox();
+            txtCriarAnimesStudio = new TextBox();
+            btnCriarAnime = new Button();
+            btnLimparCamposCriarAnime = new Button();
+            dtCriarAnimesDateLancamento = new DateTimePicker();
+            pnlCadastrarAnime = new Panel();
+            label8 = new Label();
+            txtIdBuscarAnimeAdd = new TextBox();
+            btnExcluirAnimeAdd = new Button();
+            btnLimparLista = new Button();
+            btnListarAnimes = new Button();
+            pnlListarAnime = new Panel();
+            dgvListarAnimes = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pnlCadastrarAnime.SuspendLayout();
+            pnlListarAnime.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvListarAnimes).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
-            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox1.BackgroundImage = Properties.Resources.CapaAnimeTeste;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox1.Location = new Point(18, 16);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(201, 275);
+            pictureBox1.Size = new Size(250, 375);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // button1
+            // btnCarregarCapaAnime
             // 
-            button1.Location = new Point(242, 27);
-            button1.Name = "button1";
-            button1.Size = new Size(115, 27);
-            button1.TabIndex = 1;
-            button1.Text = "Carregar Capa";
-            button1.UseVisualStyleBackColor = true;
+            btnCarregarCapaAnime.Location = new Point(153, 397);
+            btnCarregarCapaAnime.Name = "btnCarregarCapaAnime";
+            btnCarregarCapaAnime.Size = new Size(115, 27);
+            btnCarregarCapaAnime.TabIndex = 1;
+            btnCarregarCapaAnime.Text = "Carregar Capa";
+            btnCarregarCapaAnime.UseVisualStyleBackColor = true;
+            btnCarregarCapaAnime.Click += btnCarregarCapaAnime_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Noto Sans JP", 11.25F, FontStyle.Bold);
-            label1.Location = new Point(242, 68);
+            label1.Location = new Point(283, 16);
             label1.Name = "label1";
             label1.Size = new Size(58, 21);
             label1.TabIndex = 2;
@@ -82,7 +95,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Noto Sans JP", 11.25F, FontStyle.Bold);
-            label2.Location = new Point(242, 140);
+            label2.Location = new Point(283, 88);
             label2.Name = "label2";
             label2.Size = new Size(70, 21);
             label2.TabIndex = 3;
@@ -92,7 +105,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Noto Sans JP", 11.25F, FontStyle.Bold);
-            label3.Location = new Point(242, 178);
+            label3.Location = new Point(283, 126);
             label3.Name = "label3";
             label3.Size = new Size(107, 21);
             label3.TabIndex = 4;
@@ -102,7 +115,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Noto Sans JP", 11.25F, FontStyle.Bold);
-            label4.Location = new Point(242, 217);
+            label4.Location = new Point(283, 165);
             label4.Name = "label4";
             label4.Size = new Size(86, 21);
             label4.TabIndex = 5;
@@ -112,7 +125,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Noto Sans JP", 11.25F, FontStyle.Bold);
-            label5.Location = new Point(242, 254);
+            label5.Location = new Point(283, 202);
             label5.Name = "label5";
             label5.Size = new Size(168, 21);
             label5.TabIndex = 6;
@@ -122,133 +135,218 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Noto Sans JP", 11.25F, FontStyle.Bold);
-            label6.Location = new Point(18, 303);
+            label6.Location = new Point(283, 238);
             label6.Name = "label6";
-            label6.Size = new Size(88, 21);
+            label6.Size = new Size(74, 21);
             label6.TabIndex = 7;
-            label6.Text = "Descrição:";
+            label6.Text = "Sinopse:";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Noto Sans JP", 11.25F, FontStyle.Bold);
-            label7.Location = new Point(242, 104);
+            label7.Location = new Point(283, 52);
             label7.Name = "label7";
             label7.Size = new Size(64, 21);
             label7.TabIndex = 8;
             label7.Text = "Studio:";
             // 
-            // textBox1
+            // txtCriarAnimesSinopse
             // 
-            textBox1.Location = new Point(18, 327);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(742, 165);
-            textBox1.TabIndex = 9;
+            txtCriarAnimesSinopse.Location = new Point(457, 238);
+            txtCriarAnimesSinopse.Multiline = true;
+            txtCriarAnimesSinopse.Name = "txtCriarAnimesSinopse";
+            txtCriarAnimesSinopse.ScrollBars = ScrollBars.Vertical;
+            txtCriarAnimesSinopse.Size = new Size(344, 100);
+            txtCriarAnimesSinopse.TabIndex = 9;
             // 
-            // textBox2
+            // txtCriarAnimesNome
             // 
-            textBox2.Location = new Point(416, 68);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(344, 23);
-            textBox2.TabIndex = 10;
+            txtCriarAnimesNome.Location = new Point(457, 16);
+            txtCriarAnimesNome.Name = "txtCriarAnimesNome";
+            txtCriarAnimesNome.Size = new Size(344, 23);
+            txtCriarAnimesNome.TabIndex = 10;
             // 
-            // textBox3
+            // txtCriarAnimesEpisodios
             // 
-            textBox3.Location = new Point(416, 252);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(344, 23);
-            textBox3.TabIndex = 11;
+            txtCriarAnimesEpisodios.Location = new Point(457, 163);
+            txtCriarAnimesEpisodios.Name = "txtCriarAnimesEpisodios";
+            txtCriarAnimesEpisodios.Size = new Size(344, 23);
+            txtCriarAnimesEpisodios.TabIndex = 12;
             // 
-            // textBox4
+            // txtCriarAnimesTemporadas
             // 
-            textBox4.Location = new Point(416, 215);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(344, 23);
-            textBox4.TabIndex = 12;
+            txtCriarAnimesTemporadas.Location = new Point(457, 124);
+            txtCriarAnimesTemporadas.Name = "txtCriarAnimesTemporadas";
+            txtCriarAnimesTemporadas.Size = new Size(344, 23);
+            txtCriarAnimesTemporadas.TabIndex = 13;
             // 
-            // textBox5
+            // txtCriarAnimesGenero
             // 
-            textBox5.Location = new Point(416, 176);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(344, 23);
-            textBox5.TabIndex = 13;
+            txtCriarAnimesGenero.Location = new Point(457, 86);
+            txtCriarAnimesGenero.Name = "txtCriarAnimesGenero";
+            txtCriarAnimesGenero.Size = new Size(344, 23);
+            txtCriarAnimesGenero.TabIndex = 14;
             // 
-            // textBox6
+            // txtCriarAnimesStudio
             // 
-            textBox6.Location = new Point(416, 138);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(344, 23);
-            textBox6.TabIndex = 14;
+            txtCriarAnimesStudio.Location = new Point(457, 50);
+            txtCriarAnimesStudio.Name = "txtCriarAnimesStudio";
+            txtCriarAnimesStudio.Size = new Size(344, 23);
+            txtCriarAnimesStudio.TabIndex = 15;
             // 
-            // textBox7
+            // btnCriarAnime
             // 
-            textBox7.Location = new Point(416, 102);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(344, 23);
-            textBox7.TabIndex = 15;
+            btnCriarAnime.Location = new Point(645, 344);
+            btnCriarAnime.Name = "btnCriarAnime";
+            btnCriarAnime.Size = new Size(75, 23);
+            btnCriarAnime.TabIndex = 16;
+            btnCriarAnime.Text = "Salvar";
+            btnCriarAnime.UseVisualStyleBackColor = true;
+            btnCriarAnime.Click += btnCriarAnime_Click;
             // 
-            // button2
+            // btnLimparCamposCriarAnime
             // 
-            button2.Location = new Point(282, 526);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 16;
-            button2.Text = "Salvar";
-            button2.UseVisualStyleBackColor = true;
+            btnLimparCamposCriarAnime.Location = new Point(726, 344);
+            btnLimparCamposCriarAnime.Name = "btnLimparCamposCriarAnime";
+            btnLimparCamposCriarAnime.Size = new Size(75, 23);
+            btnLimparCamposCriarAnime.TabIndex = 18;
+            btnLimparCamposCriarAnime.Text = "Limpar";
+            btnLimparCamposCriarAnime.UseVisualStyleBackColor = true;
+            btnLimparCamposCriarAnime.Click += btnLimparCamposCriarAnime_Click;
             // 
-            // button3
+            // dtCriarAnimesDateLancamento
             // 
-            button3.Location = new Point(394, 526);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 17;
-            button3.Text = "Cancelar";
-            button3.UseVisualStyleBackColor = true;
+            dtCriarAnimesDateLancamento.Format = DateTimePickerFormat.Short;
+            dtCriarAnimesDateLancamento.Location = new Point(457, 201);
+            dtCriarAnimesDateLancamento.Name = "dtCriarAnimesDateLancamento";
+            dtCriarAnimesDateLancamento.Size = new Size(98, 23);
+            dtCriarAnimesDateLancamento.TabIndex = 19;
             // 
-            // button4
+            // pnlCadastrarAnime
             // 
-            button4.Location = new Point(685, 526);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 18;
-            button4.Text = "Limpar";
-            button4.UseVisualStyleBackColor = true;
+            pnlCadastrarAnime.Controls.Add(label8);
+            pnlCadastrarAnime.Controls.Add(txtIdBuscarAnimeAdd);
+            pnlCadastrarAnime.Controls.Add(btnExcluirAnimeAdd);
+            pnlCadastrarAnime.Controls.Add(btnLimparLista);
+            pnlCadastrarAnime.Controls.Add(btnListarAnimes);
+            pnlCadastrarAnime.Controls.Add(dtCriarAnimesDateLancamento);
+            pnlCadastrarAnime.Controls.Add(btnLimparCamposCriarAnime);
+            pnlCadastrarAnime.Controls.Add(btnCriarAnime);
+            pnlCadastrarAnime.Controls.Add(txtCriarAnimesStudio);
+            pnlCadastrarAnime.Controls.Add(txtCriarAnimesGenero);
+            pnlCadastrarAnime.Controls.Add(txtCriarAnimesTemporadas);
+            pnlCadastrarAnime.Controls.Add(txtCriarAnimesEpisodios);
+            pnlCadastrarAnime.Controls.Add(txtCriarAnimesNome);
+            pnlCadastrarAnime.Controls.Add(txtCriarAnimesSinopse);
+            pnlCadastrarAnime.Controls.Add(label7);
+            pnlCadastrarAnime.Controls.Add(label6);
+            pnlCadastrarAnime.Controls.Add(label5);
+            pnlCadastrarAnime.Controls.Add(label4);
+            pnlCadastrarAnime.Controls.Add(label3);
+            pnlCadastrarAnime.Controls.Add(label2);
+            pnlCadastrarAnime.Controls.Add(label1);
+            pnlCadastrarAnime.Controls.Add(btnCarregarCapaAnime);
+            pnlCadastrarAnime.Controls.Add(pictureBox1);
+            pnlCadastrarAnime.Dock = DockStyle.Left;
+            pnlCadastrarAnime.Location = new Point(0, 0);
+            pnlCadastrarAnime.Name = "pnlCadastrarAnime";
+            pnlCadastrarAnime.Size = new Size(895, 826);
+            pnlCadastrarAnime.TabIndex = 20;
+            // 
+            // label8
+            // 
+            label8.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label8.AutoSize = true;
+            label8.Font = new Font("Noto Sans JP", 11.25F, FontStyle.Bold);
+            label8.Location = new Point(37, 724);
+            label8.Name = "label8";
+            label8.Size = new Size(31, 21);
+            label8.TabIndex = 24;
+            label8.Text = "ID:";
+            // 
+            // txtIdBuscarAnimeAdd
+            // 
+            txtIdBuscarAnimeAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            txtIdBuscarAnimeAdd.Location = new Point(37, 748);
+            txtIdBuscarAnimeAdd.Name = "txtIdBuscarAnimeAdd";
+            txtIdBuscarAnimeAdd.Size = new Size(106, 23);
+            txtIdBuscarAnimeAdd.TabIndex = 23;
+            // 
+            // btnExcluirAnimeAdd
+            // 
+            btnExcluirAnimeAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnExcluirAnimeAdd.Location = new Point(153, 748);
+            btnExcluirAnimeAdd.Name = "btnExcluirAnimeAdd";
+            btnExcluirAnimeAdd.Size = new Size(75, 23);
+            btnExcluirAnimeAdd.TabIndex = 22;
+            btnExcluirAnimeAdd.Text = "Excluir";
+            btnExcluirAnimeAdd.UseVisualStyleBackColor = true;
+            btnExcluirAnimeAdd.Click += btnExcluirAnimeAdd_Click;
+            // 
+            // btnLimparLista
+            // 
+            btnLimparLista.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnLimparLista.Location = new Point(153, 777);
+            btnLimparLista.Name = "btnLimparLista";
+            btnLimparLista.Size = new Size(75, 23);
+            btnLimparLista.TabIndex = 21;
+            btnLimparLista.Text = "Limpar";
+            btnLimparLista.UseVisualStyleBackColor = true;
+            btnLimparLista.Click += btnLimparLista_Click;
+            // 
+            // btnListarAnimes
+            // 
+            btnListarAnimes.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnListarAnimes.Location = new Point(37, 777);
+            btnListarAnimes.Name = "btnListarAnimes";
+            btnListarAnimes.Size = new Size(106, 23);
+            btnListarAnimes.TabIndex = 20;
+            btnListarAnimes.Text = "Listar Animes";
+            btnListarAnimes.UseVisualStyleBackColor = true;
+            btnListarAnimes.Click += btnListarAnimes_Click;
+            // 
+            // pnlListarAnime
+            // 
+            pnlListarAnime.Controls.Add(dgvListarAnimes);
+            pnlListarAnime.Dock = DockStyle.Fill;
+            pnlListarAnime.Location = new Point(895, 0);
+            pnlListarAnime.Name = "pnlListarAnime";
+            pnlListarAnime.Size = new Size(428, 826);
+            pnlListarAnime.TabIndex = 21;
+            // 
+            // dgvListarAnimes
+            // 
+            dgvListarAnimes.BackgroundColor = SystemColors.Control;
+            dgvListarAnimes.BorderStyle = BorderStyle.None;
+            dgvListarAnimes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvListarAnimes.Dock = DockStyle.Fill;
+            dgvListarAnimes.Location = new Point(0, 0);
+            dgvListarAnimes.Name = "dgvListarAnimes";
+            dgvListarAnimes.Size = new Size(428, 826);
+            dgvListarAnimes.TabIndex = 0;
             // 
             // AdicionarAnimes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(button1);
-            Controls.Add(pictureBox1);
+            Controls.Add(pnlListarAnime);
+            Controls.Add(pnlCadastrarAnime);
             Name = "AdicionarAnimes";
-            Size = new Size(809, 578);
+            Size = new Size(1323, 826);
+            Load += AdicionarAnimes_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            pnlCadastrarAnime.ResumeLayout(false);
+            pnlCadastrarAnime.PerformLayout();
+            pnlListarAnime.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvListarAnimes).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private PictureBox pictureBox1;
-        private Button button1;
+        private Button btnCarregarCapaAnime;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -256,15 +354,23 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private TextBox txtCriarAnimesSinopse;
+        private TextBox txtCriarAnimesNome;
+        private TextBox s;
+        private TextBox txtCriarAnimesEpisodios;
+        private TextBox txtCriarAnimesTemporadas;
+        private TextBox txtCriarAnimesGenero;
+        private TextBox txtCriarAnimesStudio;
+        private Button btnCriarAnime;
+        private Button btnLimparCamposCriarAnime;
+        private DateTimePicker dtCriarAnimesDateLancamento;
+        private Panel pnlCadastrarAnime;
+        private Panel pnlListarAnime;
+        private DataGridView dgvListarAnimes;
+        private Button btnListarAnimes;
+        private Button btnLimparLista;
+        private TextBox txtIdBuscarAnimeAdd;
+        private Button btnExcluirAnimeAdd;
+        private Label label8;
     }
 }

@@ -23,7 +23,7 @@ namespace AnimesHub.Forms
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             GraphicsPath path = new GraphicsPath();
-            path.AddEllipse(0,0, picUserImage.Width, picUserImage.Height);
+            path.AddEllipse(0, 0, picUserImage.Width, picUserImage.Height);
 
             picUserImage.Region = new Region(path);
             PermissaoChecked();
@@ -91,5 +91,14 @@ namespace AnimesHub.Forms
 
         }
 
+        private void btnUcAcompanhando_Click(object sender, EventArgs e)
+        {
+            pnlConteudo.Controls.Clear();
+
+            Acompanhando acompanhandoAnimes = new Acompanhando(_usuarioLongado);
+            acompanhandoAnimes.Dock = DockStyle.Fill;
+
+            pnlConteudo.Controls.Add(acompanhandoAnimes);            
+        }
     }
 }
