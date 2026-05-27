@@ -102,7 +102,7 @@ namespace AnimesHub.Migrations
                     b.Property<int>("AnimeId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ModeNivel")
+                    b.Property<int>("StatusAnime")
                         .HasColumnType("int");
 
                     b.HasKey("UsuarioId", "AnimeId");

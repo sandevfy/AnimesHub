@@ -98,7 +98,37 @@ namespace AnimesHub.Forms
             Acompanhando acompanhandoAnimes = new Acompanhando(_usuarioLongado);
             acompanhandoAnimes.Dock = DockStyle.Fill;
 
-            pnlConteudo.Controls.Add(acompanhandoAnimes);            
+            pnlConteudo.Controls.Add(acompanhandoAnimes);
+        }
+
+        private void btnAssistindo_Click(object sender, EventArgs e)
+        {
+            pnlConteudo.Controls.Clear();
+
+            Assistindo assistindo = new Assistindo(_usuarioLongado);
+            assistindo.Dock = DockStyle.Fill;
+
+            pnlConteudo.Controls.Add(assistindo);
+        }
+
+        private void btnAssistir_Click(object sender, EventArgs e)
+        {
+            pnlConteudo.Controls.Clear();
+
+            Assistir assistindo = new Assistir(_usuarioLongado);
+            assistindo.Dock = DockStyle.Fill;
+
+            pnlConteudo.Controls.Add(assistindo);
+        }
+
+        private void btnAssistido_Click(object sender, EventArgs e)
+        {
+            pnlConteudo.Controls.Clear();
+
+            Assistidos assistido = new Assistidos(_usuarioLongado);
+            assistido.Dock = DockStyle.Fill;
+
+            pnlConteudo.Controls.Add(assistido);
         }
     }
 }

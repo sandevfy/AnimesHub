@@ -30,7 +30,8 @@ namespace AnimesHub.Forms.UserControls
         {
             using (var context = new AppDbContext())
             {
-                var animes = context.Animes.ToList();
+                var animes = context.UsuariosAnimes.Where(x => x.UsuarioId == _usuarioLongado.Id && x.StatusAnime == Enums.StatusAnime.Acompanhando)
+                    .Select(x => x.Anime).ToList();
 
                 foreach (var anime in animes)
                 {

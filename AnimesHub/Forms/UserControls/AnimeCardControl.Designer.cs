@@ -28,11 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             picCapaAnimCard = new PictureBox();
             lblNomeAnimeCard = new Label();
             lblDescAnimeCard = new Label();
             lblAnoAnimeCard = new Label();
+            btnMenuStrip = new Button();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            tsmiAcompanhando = new ToolStripMenuItem();
+            tsmiParaAssisitr = new ToolStripMenuItem();
+            tsmiAssistindo = new ToolStripMenuItem();
+            tsmiAssistido = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)picCapaAnimCard).BeginInit();
+            contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // picCapaAnimCard
@@ -75,10 +83,55 @@
             lblAnoAnimeCard.TabIndex = 3;
             lblAnoAnimeCard.Text = "2000";
             // 
+            // btnMenuStrip
+            // 
+            btnMenuStrip.Location = new Point(152, 278);
+            btnMenuStrip.Name = "btnMenuStrip";
+            btnMenuStrip.Size = new Size(28, 23);
+            btnMenuStrip.TabIndex = 4;
+            btnMenuStrip.Text = "+";
+            btnMenuStrip.UseVisualStyleBackColor = true;
+            btnMenuStrip.Click += btnMenuStrip_Click;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { tsmiAcompanhando, tsmiParaAssisitr, tsmiAssistindo, tsmiAssistido });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(161, 92);
+            // 
+            // tsmiAcompanhando
+            // 
+            tsmiAcompanhando.Name = "tsmiAcompanhando";
+            tsmiAcompanhando.Size = new Size(160, 22);
+            tsmiAcompanhando.Text = "Acompanhando";
+            tsmiAcompanhando.Click += tsmiAcompanhando_Click;
+            // 
+            // tsmiParaAssisitr
+            // 
+            tsmiParaAssisitr.Name = "tsmiParaAssisitr";
+            tsmiParaAssisitr.Size = new Size(160, 22);
+            tsmiParaAssisitr.Text = "ParaAssistir";
+            tsmiParaAssisitr.Click += tsmiParaAssisitr_Click;
+            // 
+            // tsmiAssistindo
+            // 
+            tsmiAssistindo.Name = "tsmiAssistindo";
+            tsmiAssistindo.Size = new Size(160, 22);
+            tsmiAssistindo.Text = "Assistindo";
+            tsmiAssistindo.Click += tsmiAssistindo_Click;
+            // 
+            // tsmiAssistido
+            // 
+            tsmiAssistido.Name = "tsmiAssistido";
+            tsmiAssistido.Size = new Size(160, 22);
+            tsmiAssistido.Text = "Assistido";
+            tsmiAssistido.Click += tsmiAssistido_Click;
+            // 
             // AnimeCardControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btnMenuStrip);
             Controls.Add(lblAnoAnimeCard);
             Controls.Add(lblDescAnimeCard);
             Controls.Add(lblNomeAnimeCard);
@@ -87,6 +140,7 @@
             Size = new Size(180, 300);
             Load += AnimeCardControl_Load;
             ((System.ComponentModel.ISupportInitialize)picCapaAnimCard).EndInit();
+            contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -97,5 +151,11 @@
         private Label lblNomeAnimeCard;
         private Label lblDescAnimeCard;
         private Label lblAnoAnimeCard;
+        private Button btnMenuStrip;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem tsmiParaAssisitr;
+        private ToolStripMenuItem tsmiAssistindo;
+        private ToolStripMenuItem tsmiAcompanhando;
+        private ToolStripMenuItem tsmiAssistido;
     }
 }

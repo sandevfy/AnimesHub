@@ -36,9 +36,9 @@
             btnAdicionarAnimes = new Button();
             btnSairLogin = new Button();
             btnUcAcompanhando = new Button();
-            button6 = new Button();
-            button5 = new Button();
-            button4 = new Button();
+            btnAssistido = new Button();
+            btnAssistir = new Button();
+            btnAssistindo = new Button();
             button2 = new Button();
             lblNomeUsuarioLongado = new Label();
             picUserImage = new PictureBox();
@@ -81,9 +81,9 @@
             panel1.Controls.Add(btnAdicionarAnimes);
             panel1.Controls.Add(btnSairLogin);
             panel1.Controls.Add(btnUcAcompanhando);
-            panel1.Controls.Add(button6);
-            panel1.Controls.Add(button5);
-            panel1.Controls.Add(button4);
+            panel1.Controls.Add(btnAssistido);
+            panel1.Controls.Add(btnAssistir);
+            panel1.Controls.Add(btnAssistindo);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(lblNomeUsuarioLongado);
             panel1.Controls.Add(btnUcPerfil);
@@ -136,32 +136,35 @@
             btnUcAcompanhando.UseVisualStyleBackColor = true;
             btnUcAcompanhando.Click += btnUcAcompanhando_Click;
             // 
-            // button6
+            // btnAssistido
             // 
-            button6.Location = new Point(12, 304);
-            button6.Name = "button6";
-            button6.Size = new Size(115, 23);
-            button6.TabIndex = 8;
-            button6.Text = "Assistido";
-            button6.UseVisualStyleBackColor = true;
+            btnAssistido.Location = new Point(12, 304);
+            btnAssistido.Name = "btnAssistido";
+            btnAssistido.Size = new Size(115, 23);
+            btnAssistido.TabIndex = 8;
+            btnAssistido.Text = "Assistido";
+            btnAssistido.UseVisualStyleBackColor = true;
+            btnAssistido.Click += btnAssistido_Click;
             // 
-            // button5
+            // btnAssistir
             // 
-            button5.Location = new Point(12, 275);
-            button5.Name = "button5";
-            button5.Size = new Size(115, 23);
-            button5.TabIndex = 7;
-            button5.Text = "Assistir";
-            button5.UseVisualStyleBackColor = true;
+            btnAssistir.Location = new Point(12, 275);
+            btnAssistir.Name = "btnAssistir";
+            btnAssistir.Size = new Size(115, 23);
+            btnAssistir.TabIndex = 7;
+            btnAssistir.Text = "Assistir";
+            btnAssistir.UseVisualStyleBackColor = true;
+            btnAssistir.Click += btnAssistir_Click;
             // 
-            // button4
+            // btnAssistindo
             // 
-            button4.Location = new Point(12, 246);
-            button4.Name = "button4";
-            button4.Size = new Size(115, 23);
-            button4.TabIndex = 6;
-            button4.Text = "Assistindo";
-            button4.UseVisualStyleBackColor = true;
+            btnAssistindo.Location = new Point(12, 246);
+            btnAssistindo.Name = "btnAssistindo";
+            btnAssistindo.Size = new Size(115, 23);
+            btnAssistindo.TabIndex = 6;
+            btnAssistindo.Text = "Assistindo";
+            btnAssistindo.UseVisualStyleBackColor = true;
+            btnAssistindo.Click += btnAssistindo_Click;
             // 
             // button2
             // 
@@ -221,9 +224,9 @@
         private Panel panel2;
         private Button button2;
         private Label lblNomeUsuarioLongado;
-        private Button button6;
-        private Button button5;
-        private Button button4;
+        private Button btnAssistido;
+        private Button btnAssistir;
+        private Button btnAssistindo;
         private Button btnSairLogin;
         private Button btnUcAcompanhando;
         private Button btnSolicitarAnime;

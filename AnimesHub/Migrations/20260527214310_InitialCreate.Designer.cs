@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimesHub.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260527152535_InitialCreate")]
+    [Migration("20260527214310_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -105,7 +105,7 @@ namespace AnimesHub.Migrations
                     b.Property<int>("AnimeId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ModeNivel")
+                    b.Property<int>("StatusAnime")
                         .HasColumnType("int");
 
                     b.HasKey("UsuarioId", "AnimeId");

@@ -12,15 +12,16 @@ using System.Windows.Forms;
 
 namespace AnimesHub.Forms.UserControls
 {
-    public partial class Assistidos : UserControl
+    public partial class Assistir : UserControl
     {
         private Usuario _usuarioLogado;
-        public Assistidos(Usuario usuario)
+        public Assistir(Usuario usuario)
         {
             InitializeComponent();
             _usuarioLogado = usuario;
         }
-        private void Assistidos_Load(object sender, EventArgs e)
+
+        private void Assistir_Load(object sender, EventArgs e)
         {
             LoardCards();
         }
@@ -28,7 +29,7 @@ namespace AnimesHub.Forms.UserControls
         {
             using (var db = new AppDbContext())
             {
-                var animes = db.UsuariosAnimes.Where(x => x.UsuarioId == _usuarioLogado.Id && x.StatusAnime == Enums.StatusAnime.Assistido)
+                var animes = db.UsuariosAnimes.Where(x => x.UsuarioId == _usuarioLogado.Id && x.StatusAnime == Enums.StatusAnime.ParaAssistir)
                     .Select(x => x.Anime).ToList();
 
                 foreach (var anime in animes)
@@ -36,7 +37,7 @@ namespace AnimesHub.Forms.UserControls
                     AnimeCardControl animeCard = new AnimeCardControl(anime, _usuarioLogado);
                     animeCard.SetAnime();
 
-                    flpAssistidos.Controls.Add(animeCard);
+                    flpParaAssistir.Controls.Add(animeCard);
                 }
             }
         }

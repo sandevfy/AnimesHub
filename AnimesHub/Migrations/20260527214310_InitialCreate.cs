@@ -54,7 +54,7 @@ namespace AnimesHub.Migrations
                 {
                     UsuarioId = table.Column<int>(type: "int", nullable: false),
                     AnimeId = table.Column<int>(type: "int", nullable: false),
-                    ModeNivel = table.Column<int>(type: "int", nullable: false)
+                    StatusAnime = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
