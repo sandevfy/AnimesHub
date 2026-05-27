@@ -1,6 +1,7 @@
 ﻿using AnimesHub.Data;
 using AnimesHub.Enums;
 using AnimesHub.Models;
+using System.Drawing.Drawing2D;
 
 namespace AnimesHub.Forms
 {
@@ -27,10 +28,15 @@ namespace AnimesHub.Forms
 
         private void PerfilControl_Load(object sender, EventArgs e)
         {
-            PermissaoChecked();
-            LoadUserPerfil();
+            GraphicsPath path = new GraphicsPath();
+            path.AddEllipse(0,0, picUserImage.Width, picUserImage.Height);
+
+            picUserImage.Region = new Region(path);
 
             cmbRole.DataSource = Enum.GetValues<UserRole>();
+
+            PermissaoChecked();
+            LoadUserPerfil();
         }
         private void LoadUserPerfilAdm()
         {
@@ -119,6 +125,12 @@ namespace AnimesHub.Forms
                 }
             }
 
+           if (_usuarioLongado.Role != UserRole.Admin && usuario.Role == UserRole.Admin)
+            {
+                    MessageBox.Show("Ação não permitida.");
+                    return;
+            }
+
             db.SaveChanges();
 
             MessageBox.Show(
@@ -151,7 +163,7 @@ namespace AnimesHub.Forms
             }
             if (usuario.Role == Enums.UserRole.Admin)
             {
-                MessageBox.Show("Não é possível excluir um administrador.");
+                MessageBox.Show("Ação não permitida.");
                 return;
             }
 

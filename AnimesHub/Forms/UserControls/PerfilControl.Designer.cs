@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerfilControl));
             btnSolicitarEditUser = new Button();
             btnBuscarEditUser = new Button();
             txtIdUserEditBuscar = new TextBox();
             label7 = new Label();
             pnlUserEditAdm = new Panel();
             pnlPermissoes = new Panel();
+            cmbRole = new ComboBox();
             label8 = new Label();
             btnExcluirUsuario = new Button();
             btnSalvarPerfil = new Button();
@@ -48,12 +50,11 @@
             txtNameUserEdit = new TextBox();
             label2 = new Label();
             button1 = new Button();
-            pictureBox1 = new PictureBox();
+            picUserImage = new PictureBox();
             label1 = new Label();
-            cmbRole = new ComboBox();
             pnlUserEditAdm.SuspendLayout();
             pnlPermissoes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picUserImage).BeginInit();
             SuspendLayout();
             // 
             // btnSolicitarEditUser
@@ -118,6 +119,14 @@
             pnlPermissoes.Name = "pnlPermissoes";
             pnlPermissoes.Size = new Size(222, 151);
             pnlPermissoes.TabIndex = 20;
+            // 
+            // cmbRole
+            // 
+            cmbRole.FormattingEnabled = true;
+            cmbRole.Location = new Point(115, 21);
+            cmbRole.Name = "cmbRole";
+            cmbRole.Size = new Size(96, 23);
+            cmbRole.TabIndex = 17;
             // 
             // label8
             // 
@@ -246,14 +255,16 @@
             button1.Text = "Editar foto";
             button1.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // picUserImage
             // 
-            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox1.Location = new Point(22, 20);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(102, 76);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            picUserImage.BackgroundImage = (Image)resources.GetObject("picUserImage.BackgroundImage");
+            picUserImage.BackgroundImageLayout = ImageLayout.Stretch;
+            picUserImage.BorderStyle = BorderStyle.FixedSingle;
+            picUserImage.Location = new Point(46, 30);
+            picUserImage.Name = "picUserImage";
+            picUserImage.Size = new Size(80, 80);
+            picUserImage.TabIndex = 1;
+            picUserImage.TabStop = false;
             // 
             // label1
             // 
@@ -264,14 +275,6 @@
             label1.Size = new Size(202, 23);
             label1.TabIndex = 0;
             label1.Text = "Nome do usuario aqui";
-            // 
-            // cmbRole
-            // 
-            cmbRole.FormattingEnabled = true;
-            cmbRole.Location = new Point(115, 21);
-            cmbRole.Name = "cmbRole";
-            cmbRole.Size = new Size(96, 23);
-            cmbRole.TabIndex = 17;
             // 
             // PerfilControl
             // 
@@ -292,7 +295,7 @@
             Controls.Add(txtNameUserEdit);
             Controls.Add(label2);
             Controls.Add(button1);
-            Controls.Add(pictureBox1);
+            Controls.Add(picUserImage);
             Controls.Add(label1);
             Name = "PerfilControl";
             Size = new Size(706, 491);
@@ -301,7 +304,7 @@
             pnlUserEditAdm.PerformLayout();
             pnlPermissoes.ResumeLayout(false);
             pnlPermissoes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picUserImage).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -325,7 +328,7 @@
         private TextBox txtNameUserEdit;
         private Label label2;
         private Button button1;
-        private PictureBox pictureBox1;
+        private PictureBox picUserImage;
         private Label label1;
         private Button btnExcluirUsuario;
         private Label label8;
