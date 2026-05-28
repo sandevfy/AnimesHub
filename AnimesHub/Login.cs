@@ -7,7 +7,6 @@ namespace AnimesHub
 {
     public partial class Login : Form
     {
-        private int _usuarioLongado;
         public Login()
         {
             InitializeComponent();
@@ -15,7 +14,7 @@ namespace AnimesHub
         private void Login_Load(object sender, EventArgs e)
         {
             txtUserLogin.Text = "admin"; // temporario
-            txtUserSenha.Text = "2412"; // temporario
+            txtUserSenha.Text = "admin"; // temporario
             GraphicsPath path = new GraphicsPath();
             path.AddEllipse(0, 0, picLoginPerfil.Width, picLoginPerfil.Height);
             picLoginPerfil.Region = new Region(path);

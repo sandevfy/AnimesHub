@@ -13,11 +13,11 @@ namespace AnimesHub.Forms
 {
     public partial class FormPrincipal : Form
     {
-        private Usuario _usuarioLongado;
+        private Usuario _usuarioLogado;
         public FormPrincipal(Usuario usuario)
         {
             InitializeComponent();
-            _usuarioLongado = usuario;
+            _usuarioLogado = usuario;
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
@@ -31,26 +31,26 @@ namespace AnimesHub.Forms
             LoadUserPerfil();
             pnlConteudo.Controls.Clear();
 
-            HomeControl home = new HomeControl();
+            HomeControl home = new HomeControl(_usuarioLogado);
             home.Dock = DockStyle.Fill;
 
             pnlConteudo.Controls.Add(home);
         }
         private void PermissaoChecked()
         {
-            bool isAdmin = _usuarioLongado.Role == Enums.UserRole.Admin;
+            bool isAdmin = _usuarioLogado.Role == Enums.UserRole.Admin;
 
             btnAdicionarAnimes.Visible = isAdmin;
         }
         private void LoadUserPerfil()
         {
-            lblNomeUsuarioLongado.Text = _usuarioLongado.Name;
+            lblNomeUsuarioLongado.Text = _usuarioLogado.Name;
         }
         private void btnUcHome_Click(object sender, EventArgs e)
         {
             pnlConteudo.Controls.Clear();
 
-            HomeControl home = new HomeControl();
+            HomeControl home = new HomeControl(_usuarioLogado);
             home.Dock = DockStyle.Fill;
 
             pnlConteudo.Controls.Add(home);
@@ -60,7 +60,7 @@ namespace AnimesHub.Forms
         {
             pnlConteudo.Controls.Clear();
 
-            PerfilControl perfil = new PerfilControl(_usuarioLongado);
+            PerfilControl perfil = new PerfilControl(_usuarioLogado);
             perfil.Dock = DockStyle.Fill;
 
             pnlConteudo.Controls.Add(perfil);
@@ -95,7 +95,7 @@ namespace AnimesHub.Forms
         {
             pnlConteudo.Controls.Clear();
 
-            Acompanhando acompanhandoAnimes = new Acompanhando(_usuarioLongado);
+            Acompanhando acompanhandoAnimes = new Acompanhando(_usuarioLogado);
             acompanhandoAnimes.Dock = DockStyle.Fill;
 
             pnlConteudo.Controls.Add(acompanhandoAnimes);
@@ -105,7 +105,7 @@ namespace AnimesHub.Forms
         {
             pnlConteudo.Controls.Clear();
 
-            Assistindo assistindo = new Assistindo(_usuarioLongado);
+            Assistindo assistindo = new Assistindo(_usuarioLogado);
             assistindo.Dock = DockStyle.Fill;
 
             pnlConteudo.Controls.Add(assistindo);
@@ -115,7 +115,7 @@ namespace AnimesHub.Forms
         {
             pnlConteudo.Controls.Clear();
 
-            Assistir assistindo = new Assistir(_usuarioLongado);
+            Assistir assistindo = new Assistir(_usuarioLogado);
             assistindo.Dock = DockStyle.Fill;
 
             pnlConteudo.Controls.Add(assistindo);
@@ -125,7 +125,7 @@ namespace AnimesHub.Forms
         {
             pnlConteudo.Controls.Clear();
 
-            Assistidos assistido = new Assistidos(_usuarioLongado);
+            Assistidos assistido = new Assistidos(_usuarioLogado);
             assistido.Dock = DockStyle.Fill;
 
             pnlConteudo.Controls.Add(assistido);
