@@ -39,6 +39,7 @@
             tsmiParaAssisitr = new ToolStripMenuItem();
             tsmiAssistindo = new ToolStripMenuItem();
             tsmiAssistido = new ToolStripMenuItem();
+            cbFavoritos = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)picCapaAnimCard).BeginInit();
             contextMenuStrip1.SuspendLayout();
             SuspendLayout();
@@ -127,10 +128,21 @@
             tsmiAssistido.Text = "Assistido";
             tsmiAssistido.Click += tsmiAssistido_Click;
             // 
+            // cbFavoritos
+            // 
+            cbFavoritos.AutoSize = true;
+            cbFavoritos.Location = new Point(165, 213);
+            cbFavoritos.Name = "cbFavoritos";
+            cbFavoritos.Size = new Size(15, 14);
+            cbFavoritos.TabIndex = 5;
+            cbFavoritos.UseVisualStyleBackColor = true;
+            cbFavoritos.CheckedChanged += cbFavoritos_CheckedChanged;
+            // 
             // AnimeCardControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(cbFavoritos);
             Controls.Add(btnMenuStrip);
             Controls.Add(lblAnoAnimeCard);
             Controls.Add(lblDescAnimeCard);
@@ -157,5 +169,6 @@
         private ToolStripMenuItem tsmiAssistindo;
         private ToolStripMenuItem tsmiAcompanhando;
         private ToolStripMenuItem tsmiAssistido;
+        private CheckBox cbFavoritos;
     }
 }

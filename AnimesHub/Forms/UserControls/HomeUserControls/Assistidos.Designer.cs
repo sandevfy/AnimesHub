@@ -1,6 +1,6 @@
 ﻿namespace AnimesHub.Forms.UserControls
 {
-    partial class Acompanhando
+    partial class Assistidos
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,21 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            flpAcompanhando = new FlowLayoutPanel();
             panel1 = new Panel();
             label1 = new Label();
+            panel2 = new Panel();
+            flpAssistidos = new FlowLayoutPanel();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
-            // 
-            // flpAcompanhando
-            // 
-            flpAcompanhando.AutoScroll = true;
-            flpAcompanhando.Dock = DockStyle.Fill;
-            flpAcompanhando.Location = new Point(0, 100);
-            flpAcompanhando.Name = "flpAcompanhando";
-            flpAcompanhando.Size = new Size(1255, 706);
-            flpAcompanhando.TabIndex = 0;
-            flpAcompanhando.Paint += flpAcompanhando_Paint;
             // 
             // panel1
             // 
@@ -50,36 +42,55 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1255, 100);
-            panel1.TabIndex = 1;
+            panel1.Size = new Size(1184, 61);
+            panel1.TabIndex = 0;
             // 
             // label1
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            label1.Font = new Font("Noto Sans JP Black", 26.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(452, 29);
+            label1.Font = new Font("Knight Souls Personal Use", 18F, FontStyle.Bold | FontStyle.Italic);
+            label1.Location = new Point(16, 17);
             label1.Name = "label1";
-            label1.Size = new Size(296, 51);
-            label1.TabIndex = 0;
-            label1.Text = "Acompanhando";
+            label1.Size = new Size(210, 41);
+            label1.TabIndex = 1;
+            label1.Text = "Assistidos";
             // 
-            // Acompanhando
+            // panel2
+            // 
+            panel2.Controls.Add(flpAssistidos);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 61);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1184, 711);
+            panel2.TabIndex = 1;
+            // 
+            // flpAssistidos
+            // 
+            flpAssistidos.Dock = DockStyle.Fill;
+            flpAssistidos.Location = new Point(0, 0);
+            flpAssistidos.Name = "flpAssistidos";
+            flpAssistidos.Size = new Size(1184, 711);
+            flpAssistidos.TabIndex = 0;
+            // 
+            // Assistidos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(flpAcompanhando);
+            Controls.Add(panel2);
             Controls.Add(panel1);
-            Name = "Acompanhando";
-            Size = new Size(1255, 806);
-            Load += Acompanhando_Load;
+            Name = "Assistidos";
+            Size = new Size(1184, 772);
+            Load += Assistidos_Load;
             panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private FlowLayoutPanel flpAcompanhando;
         private Panel panel1;
+        private Panel panel2;
         private Label label1;
+        private FlowLayoutPanel flpAssistidos;
     }
 }

@@ -10,6 +10,7 @@ namespace AnimesHub.Models
         public int AnimeId { get; set; }
         public Anime Anime { get; set; }
 
-        public StatusAnime StatusAnime { get; set; }
+        public StatusAnime? StatusAnime { get; set; }
+        public bool IsFavorite { get; set; }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace AnimesHub.Forms.UserControls
+﻿namespace AnimesHub.Forms.UserControls.HomeUserControls
 {
-    partial class Assistindo
+    partial class FavoritosHome
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,7 +31,7 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
-            flpAssistindo = new FlowLayoutPanel();
+            flpFavoritosHome = new FlowLayoutPanel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -42,46 +42,47 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1292, 100);
+            panel1.Size = new Size(1197, 61);
             panel1.TabIndex = 0;
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            label1.Font = new Font("Noto Sans JP Black", 26.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(519, 29);
+            label1.AutoSize = true;
+            label1.Font = new Font("Knight Souls Personal Use", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.Location = new Point(16, 17);
             label1.Name = "label1";
-            label1.Size = new Size(206, 51);
-            label1.TabIndex = 1;
-            label1.Text = "Assistindo";
+            label1.Size = new Size(184, 33);
+            label1.TabIndex = 0;
+            label1.Text = "Favoritos";
             // 
             // panel2
             // 
-            panel2.Controls.Add(flpAssistindo);
+            panel2.Controls.Add(flpFavoritosHome);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(0, 100);
+            panel2.Location = new Point(0, 61);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1292, 707);
+            panel2.Size = new Size(1197, 784);
             panel2.TabIndex = 1;
             // 
-            // flpAssistindo
+            // flpFavoritosHome
             // 
-            flpAssistindo.Dock = DockStyle.Fill;
-            flpAssistindo.Location = new Point(0, 0);
-            flpAssistindo.Name = "flpAssistindo";
-            flpAssistindo.Size = new Size(1292, 707);
-            flpAssistindo.TabIndex = 0;
+            flpFavoritosHome.Dock = DockStyle.Fill;
+            flpFavoritosHome.Location = new Point(0, 0);
+            flpFavoritosHome.Name = "flpFavoritosHome";
+            flpFavoritosHome.Size = new Size(1197, 784);
+            flpFavoritosHome.TabIndex = 0;
             // 
-            // Assistindo
+            // FavoritosHome
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Name = "Assistindo";
-            Size = new Size(1292, 807);
-            Load += Assistindo_Load;
+            Name = "FavoritosHome";
+            Size = new Size(1197, 845);
+            Load += FavoritosHome_Load;
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -91,6 +92,6 @@
         private Panel panel1;
         private Label label1;
         private Panel panel2;
-        private FlowLayoutPanel flpAssistindo;
+        private FlowLayoutPanel flpFavoritosHome;
     }
 }

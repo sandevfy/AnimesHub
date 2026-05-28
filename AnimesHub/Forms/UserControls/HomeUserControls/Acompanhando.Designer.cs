@@ -1,6 +1,6 @@
-﻿namespace AnimesHub.Forms.UserControls.HomeUserControls
+﻿namespace AnimesHub.Forms.UserControls
 {
-    partial class HomePrincipal
+    partial class Acompanhando
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,70 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
+            flpAcompanhando = new FlowLayoutPanel();
             panel1 = new Panel();
-            flpLancamentosHome = new FlowLayoutPanel();
-            panel2 = new Panel();
             label1 = new Label();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
             SuspendLayout();
+            // 
+            // flpAcompanhando
+            // 
+            flpAcompanhando.AutoScroll = true;
+            flpAcompanhando.Dock = DockStyle.Fill;
+            flpAcompanhando.Location = new Point(0, 61);
+            flpAcompanhando.Name = "flpAcompanhando";
+            flpAcompanhando.Size = new Size(1255, 745);
+            flpAcompanhando.TabIndex = 0;
+            flpAcompanhando.Paint += flpAcompanhando_Paint;
             // 
             // panel1
             // 
-            panel1.Controls.Add(flpLancamentosHome);
-            panel1.Controls.Add(panel2);
+            panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1008, 522);
+            panel1.Size = new Size(1255, 61);
             panel1.TabIndex = 1;
-            // 
-            // flpLancamentosHome
-            // 
-            flpLancamentosHome.Dock = DockStyle.Fill;
-            flpLancamentosHome.Location = new Point(0, 54);
-            flpLancamentosHome.Name = "flpLancamentosHome";
-            flpLancamentosHome.Size = new Size(1008, 468);
-            flpLancamentosHome.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(label1);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1008, 54);
-            panel2.TabIndex = 0;
             // 
             // label1
             // 
-            label1.AutoSize = true;
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.Font = new Font("Knight Souls Personal Use", 18F, FontStyle.Bold | FontStyle.Italic);
             label1.Location = new Point(16, 17);
             label1.Name = "label1";
-            label1.Size = new Size(235, 33);
+            label1.Size = new Size(296, 41);
             label1.TabIndex = 0;
-            label1.Text = "Lançamento";
+            label1.Text = "Acompanhando";
             // 
-            // HomePrincipal
+            // Acompanhando
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(flpAcompanhando);
             Controls.Add(panel1);
-            Name = "HomePrincipal";
-            Size = new Size(1008, 682);
-            Load += HomePrincipal_Load;
+            Name = "Acompanhando";
+            Size = new Size(1255, 806);
+            Load += Acompanhando_Load;
             panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
+        private FlowLayoutPanel flpAcompanhando;
         private Panel panel1;
-        private FlowLayoutPanel flpLancamentosHome;
-        private Panel panel2;
         private Label label1;
     }
 }

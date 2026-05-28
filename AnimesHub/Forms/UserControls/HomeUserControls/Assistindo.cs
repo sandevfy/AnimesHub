@@ -1,14 +1,6 @@
 ﻿using AnimesHub.Data;
 using AnimesHub.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace AnimesHub.Forms.UserControls
 {
@@ -22,9 +14,9 @@ namespace AnimesHub.Forms.UserControls
         }
         private void Assistindo_Load(object sender, EventArgs e)
         {
-            LoardCards();
+            LoadCards();
         }
-        private void LoardCards()
+        private void LoadCards()
         {
             using (var db = new AppDbContext())
             {

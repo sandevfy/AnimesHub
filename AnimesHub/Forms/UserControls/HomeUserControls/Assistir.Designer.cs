@@ -42,16 +42,16 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1287, 100);
+            panel1.Size = new Size(1287, 61);
             panel1.TabIndex = 0;
             // 
             // label1
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            label1.Font = new Font("Noto Sans JP Black", 26.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(482, 31);
+            label1.Font = new Font("Knight Souls Personal Use", 18F, FontStyle.Bold | FontStyle.Italic);
+            label1.Location = new Point(16, 17);
             label1.Name = "label1";
-            label1.Size = new Size(257, 51);
+            label1.Size = new Size(257, 41);
             label1.TabIndex = 1;
             label1.Text = "Para Assisitir";
             // 
@@ -59,9 +59,9 @@
             // 
             panel2.Controls.Add(flpParaAssistir);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(0, 100);
+            panel2.Location = new Point(0, 61);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1287, 754);
+            panel2.Size = new Size(1287, 793);
             panel2.TabIndex = 1;
             // 
             // flpParaAssistir
@@ -69,7 +69,7 @@
             flpParaAssistir.Dock = DockStyle.Fill;
             flpParaAssistir.Location = new Point(0, 0);
             flpParaAssistir.Name = "flpParaAssistir";
-            flpParaAssistir.Size = new Size(1287, 754);
+            flpParaAssistir.Size = new Size(1287, 793);
             flpParaAssistir.TabIndex = 0;
             // 
             // Assistir

@@ -71,5 +71,31 @@ namespace AnimesHub.Forms.UserControls
 
             db.SaveChanges();
         }
+
+        private void cbFavoritos_CheckedChanged(object sender, EventArgs e)
+        {
+            using var db = new AppDbContext();
+
+            var usuarioAnime = db.UsuariosAnimes.FirstOrDefault(x => x.UsuarioId == _usuarioLogado.Id && x.AnimeId == _anime.Id);
+
+            if (usuarioAnime == null)
+            {
+                // Cria um novo relacionamento sem status
+                usuarioAnime = new UsuarioAnime
+                {
+                    UsuarioId = _usuarioLogado.Id,
+                    AnimeId = _anime.Id,
+                    IsFavorite = true
+                };
+
+                db.UsuariosAnimes.Add(usuarioAnime);
+            }
+            else
+            {
+                usuarioAnime.IsFavorite = cbFavoritos.Checked;
+            }
+
+            db.SaveChanges();
+        }
     }
 }

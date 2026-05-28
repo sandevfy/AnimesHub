@@ -1,4 +1,5 @@
 ﻿using AnimesHub.Forms.UserControls;
+using AnimesHub.Forms.UserControls.HomeUserControls;
 using AnimesHub.Models;
 using System;
 using System.Collections.Generic;
@@ -129,6 +130,16 @@ namespace AnimesHub.Forms
             assistido.Dock = DockStyle.Fill;
 
             pnlConteudo.Controls.Add(assistido);
+        }
+
+        private void btnFavoritosHome_Click(object sender, EventArgs e)
+        {
+            pnlConteudo.Controls.Clear();
+
+            FavoritosHome favHome = new FavoritosHome(_usuarioLogado);
+            favHome.Dock = DockStyle.Fill;
+
+            pnlConteudo.Controls.Add(favHome);
         }
     }
 }

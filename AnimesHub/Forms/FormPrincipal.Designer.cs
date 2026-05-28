@@ -39,7 +39,7 @@
             btnAssistido = new Button();
             btnAssistir = new Button();
             btnAssistindo = new Button();
-            button2 = new Button();
+            btnFavoritosHome = new Button();
             lblNomeUsuarioLongado = new Label();
             picUserImage = new PictureBox();
             panel1.SuspendLayout();
@@ -84,7 +84,7 @@
             panel1.Controls.Add(btnAssistido);
             panel1.Controls.Add(btnAssistir);
             panel1.Controls.Add(btnAssistindo);
-            panel1.Controls.Add(button2);
+            panel1.Controls.Add(btnFavoritosHome);
             panel1.Controls.Add(lblNomeUsuarioLongado);
             panel1.Controls.Add(btnUcPerfil);
             panel1.Controls.Add(btnUcHome);
@@ -166,14 +166,15 @@
             btnAssistindo.UseVisualStyleBackColor = true;
             btnAssistindo.Click += btnAssistindo_Click;
             // 
-            // button2
+            // btnFavoritosHome
             // 
-            button2.Location = new Point(12, 188);
-            button2.Name = "button2";
-            button2.Size = new Size(115, 23);
-            button2.TabIndex = 5;
-            button2.Text = "Favoritos";
-            button2.UseVisualStyleBackColor = true;
+            btnFavoritosHome.Location = new Point(12, 188);
+            btnFavoritosHome.Name = "btnFavoritosHome";
+            btnFavoritosHome.Size = new Size(115, 23);
+            btnFavoritosHome.TabIndex = 5;
+            btnFavoritosHome.Text = "Favoritos";
+            btnFavoritosHome.UseVisualStyleBackColor = true;
+            btnFavoritosHome.Click += btnFavoritosHome_Click;
             // 
             // lblNomeUsuarioLongado
             // 
@@ -222,7 +223,7 @@
         private Panel panel1;
         private PictureBox picUserImage;
         private Panel panel2;
-        private Button button2;
+        private Button btnFavoritosHome;
         private Label lblNomeUsuarioLongado;
         private Button btnAssistido;
         private Button btnAssistir;

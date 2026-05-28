@@ -64,9 +64,9 @@
             // 
             // btnCategoriaStrip
             // 
-            btnCategoriaStrip.Location = new Point(533, 7);
+            btnCategoriaStrip.Location = new Point(498, 11);
             btnCategoriaStrip.Name = "btnCategoriaStrip";
-            btnCategoriaStrip.Size = new Size(135, 44);
+            btnCategoriaStrip.Size = new Size(109, 34);
             btnCategoriaStrip.TabIndex = 3;
             btnCategoriaStrip.Text = "Categorias";
             btnCategoriaStrip.UseVisualStyleBackColor = true;
@@ -74,18 +74,18 @@
             // 
             // button2
             // 
-            button2.Location = new Point(382, 7);
+            button2.Location = new Point(383, 11);
             button2.Name = "button2";
-            button2.Size = new Size(135, 44);
+            button2.Size = new Size(109, 34);
             button2.TabIndex = 2;
             button2.Text = "Populares";
             button2.UseVisualStyleBackColor = true;
             // 
             // btnNovidadesHome
             // 
-            btnNovidadesHome.Location = new Point(231, 7);
+            btnNovidadesHome.Location = new Point(268, 11);
             btnNovidadesHome.Name = "btnNovidadesHome";
-            btnNovidadesHome.Size = new Size(135, 44);
+            btnNovidadesHome.Size = new Size(109, 34);
             btnNovidadesHome.TabIndex = 1;
             btnNovidadesHome.Text = "Novidades";
             btnNovidadesHome.UseVisualStyleBackColor = true;
@@ -94,10 +94,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Noto Sans JP Black", 22F, FontStyle.Bold);
-            label1.Location = new Point(19, 7);
+            label1.Font = new Font("Knight Souls Personal Use", 21.7499981F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.Location = new Point(3, 11);
             label1.Name = "label1";
-            label1.Size = new Size(206, 44);
+            label1.Size = new Size(259, 40);
             label1.TabIndex = 0;
             label1.Text = "Animes HUB";
             // 
