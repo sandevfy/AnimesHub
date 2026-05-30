@@ -1,7 +1,5 @@
 ﻿using AnimesHub.Data;
 using AnimesHub.Models;
-using System;
-using System.Collections.Generic;
 using System.Data;
 
 namespace AnimesHub.Forms.UserControls.HomeUserControls
@@ -20,17 +18,36 @@ namespace AnimesHub.Forms.UserControls.HomeUserControls
         }
         private void LoardCards()
         {
-            using (var db = new AppDbContext())
+            using var db = new AppDbContext();
+
+            flpLancamentosHome.Controls.Clear();
+            flpAcompanhandoHome.Controls.Clear();
+
+            var now = DateTime.Now;
+
+            var animesLanc = db.Animes.Where(x => x.DateLancamento > now)
+                .OrderBy(x => x.DateLancamento)
+                .Take(5).ToList();
+
+            foreach (var anime in animesLanc)
             {
-                var animes = db.Animes.Where(x => x.DateLancamento > DateTime.Now).OrderBy(x => x.DateLancamento).ToList();
+                AnimeCardControl animCard = new AnimeCardControl(anime, _usuarioLogado);
+                animCard.SetAnime();
 
-                foreach (var anime in animes)
-                {
-                    AnimeCardControl animCard = new AnimeCardControl(anime, _usuarioLogado);
-                    animCard.SetAnime();
+                flpLancamentosHome.Controls.Add(animCard);
+            }
 
-                    flpLancamentosHome.Controls.Add(animCard);
-                }
+            var animeAcomp = db.UsuariosAnimes.Where(x => x.UsuarioId == _usuarioLogado.Id && x.StatusAnime == Enums.StatusAnime.Acompanhando)
+                .Select(x => x.Anime).OrderBy(x => x.Id)
+                .Take(5).ToList();
+
+            foreach (var animeAc in animeAcomp)
+            {
+                AnimeCardControl animeCardAc = new AnimeCardControl(animeAc, _usuarioLogado);
+                animeCardAc.SetAnime();
+
+                flpAcompanhandoHome.Controls.Add(animeCardAc);
+
             }
         }
     }

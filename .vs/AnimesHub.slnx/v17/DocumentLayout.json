@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\loock\\VisualStudioProjetos\\ProjetosPessoais\\AnimesHub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9AAD0267-64E4-5E9D-7489-5F939BE0B7FB}|AnimesHub\\AnimesHub.csproj|c:\\users\\loock\\visualstudioprojetos\\projetospessoais\\animeshub\\animeshub\\forms\\usercontrols\\homeusercontrols\\favoritoshome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AAD0267-64E4-5E9D-7489-5F939BE0B7FB}|AnimesHub\\AnimesHub.csproj|solutionrelative:animeshub\\forms\\usercontrols\\homeusercontrols\\favoritoshome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9AAD0267-64E4-5E9D-7489-5F939BE0B7FB}|AnimesHub\\AnimesHub.csproj|c:\\users\\loock\\visualstudioprojetos\\projetospessoais\\animeshub\\animeshub\\forms\\solicitaranime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AAD0267-64E4-5E9D-7489-5F939BE0B7FB}|AnimesHub\\AnimesHub.csproj|solutionrelative:animeshub\\forms\\solicitaranime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AAD0267-64E4-5E9D-7489-5F939BE0B7FB}|AnimesHub\\AnimesHub.csproj|c:\\users\\loock\\visualstudioprojetos\\projetospessoais\\animeshub\\animeshub\\forms\\usercontrols\\homeusercontrols\\assistindo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AAD0267-64E4-5E9D-7489-5F939BE0B7FB}|AnimesHub\\AnimesHub.csproj|solutionrelative:animeshub\\forms\\usercontrols\\homeusercontrols\\assistindo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9AAD0267-64E4-5E9D-7489-5F939BE0B7FB}|AnimesHub\\AnimesHub.csproj|C:\\Users\\loock\\VisualStudioProjetos\\ProjetosPessoais\\AnimesHub\\animeshub\\forms\\usercontrols\\homeusercontrols\\uchomeprincipal\\pesquisaranimes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9AAD0267-64E4-5E9D-7489-5F939BE0B7FB}|AnimesHub\\AnimesHub.csproj|solutionrelative:animeshub\\forms\\usercontrols\\homeusercontrols\\uchomeprincipal\\pesquisaranimes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AAD0267-64E4-5E9D-7489-5F939BE0B7FB}|AnimesHub\\AnimesHub.csproj|c:\\users\\loock\\visualstudioprojetos\\projetospessoais\\animeshub\\animeshub\\forms\\usercontrols\\homeusercontrols\\uchomeprincipal\\pesquisaranimes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AAD0267-64E4-5E9D-7489-5F939BE0B7FB}|AnimesHub\\AnimesHub.csproj|solutionrelative:animeshub\\forms\\usercontrols\\homeusercontrols\\uchomeprincipal\\pesquisaranimes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AAD0267-64E4-5E9D-7489-5F939BE0B7FB}|AnimesHub\\AnimesHub.csproj|C:\\Users\\loock\\VisualStudioProjetos\\ProjetosPessoais\\AnimesHub\\animeshub\\forms\\usercontrols\\homecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9AAD0267-64E4-5E9D-7489-5F939BE0B7FB}|AnimesHub\\AnimesHub.csproj|solutionrelative:animeshub\\forms\\usercontrols\\homecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AAD0267-64E4-5E9D-7489-5F939BE0B7FB}|AnimesHub\\AnimesHub.csproj|c:\\users\\loock\\visualstudioprojetos\\projetospessoais\\animeshub\\animeshub\\forms\\usercontrols\\homecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AAD0267-64E4-5E9D-7489-5F939BE0B7FB}|AnimesHub\\AnimesHub.csproj|solutionrelative:animeshub\\forms\\usercontrols\\homecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,39 +29,70 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 788,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 834,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FavoritosHome.cs",
-              "DocumentMoniker": "C:\\Users\\loock\\VisualStudioProjetos\\ProjetosPessoais\\AnimesHub\\AnimesHub\\Forms\\UserControls\\HomeUserControls\\FavoritosHome.cs",
-              "RelativeDocumentMoniker": "AnimesHub\\Forms\\UserControls\\HomeUserControls\\FavoritosHome.cs",
-              "ToolTip": "C:\\Users\\loock\\VisualStudioProjetos\\ProjetosPessoais\\AnimesHub\\AnimesHub\\Forms\\UserControls\\HomeUserControls\\FavoritosHome.cs",
-              "RelativeToolTip": "AnimesHub\\Forms\\UserControls\\HomeUserControls\\FavoritosHome.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "HomeControl.cs",
+              "DocumentMoniker": "C:\\Users\\loock\\VisualStudioProjetos\\ProjetosPessoais\\AnimesHub\\AnimesHub\\Forms\\UserControls\\HomeControl.cs",
+              "RelativeDocumentMoniker": "AnimesHub\\Forms\\UserControls\\HomeControl.cs",
+              "ToolTip": "C:\\Users\\loock\\VisualStudioProjetos\\ProjetosPessoais\\AnimesHub\\AnimesHub\\Forms\\UserControls\\HomeControl.cs",
+              "RelativeToolTip": "AnimesHub\\Forms\\UserControls\\HomeControl.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAnwCsAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T15:15:31.827Z",
+              "WhenOpened": "2026-05-30T00:22:25.16Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 152,
-          "SelectedChildIndex": 0,
-          "Children": [
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\loock\\VisualStudioProjetos\\ProjetosPessoais\\AnimesHub\\AnimesHub\\Forms\\UserControls\\HomeControl.cs",
+              "RelativeDocumentMoniker": "AnimesHub\\Forms\\UserControls\\HomeControl.cs",
+              "ToolTip": "C:\\Users\\loock\\VisualStudioProjetos\\ProjetosPessoais\\AnimesHub\\AnimesHub\\Forms\\UserControls\\HomeControl.cs [Design]",
+              "RelativeToolTip": "AnimesHub\\Forms\\UserControls\\HomeControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T00:21:58.581Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PesquisarAnimes.cs",
+              "DocumentMoniker": "C:\\Users\\loock\\VisualStudioProjetos\\ProjetosPessoais\\AnimesHub\\AnimesHub\\Forms\\UserControls\\HomeUserControls\\UcHomePrincipal\\PesquisarAnimes.cs",
+              "RelativeDocumentMoniker": "AnimesHub\\Forms\\UserControls\\HomeUserControls\\UcHomePrincipal\\PesquisarAnimes.cs",
+              "ToolTip": "C:\\Users\\loock\\VisualStudioProjetos\\ProjetosPessoais\\AnimesHub\\AnimesHub\\Forms\\UserControls\\HomeUserControls\\UcHomePrincipal\\PesquisarAnimes.cs",
+              "RelativeToolTip": "AnimesHub\\Forms\\UserControls\\HomeUserControls\\UcHomePrincipal\\PesquisarAnimes.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAqwCoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T00:14:38.422Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Assistindo.cs",
-              "DocumentMoniker": "C:\\Users\\loock\\VisualStudioProjetos\\ProjetosPessoais\\AnimesHub\\AnimesHub\\Forms\\UserControls\\HomeUserControls\\Assistindo.cs",
-              "RelativeDocumentMoniker": "AnimesHub\\Forms\\UserControls\\HomeUserControls\\Assistindo.cs",
-              "ToolTip": "C:\\Users\\loock\\VisualStudioProjetos\\ProjetosPessoais\\AnimesHub\\AnimesHub\\Forms\\UserControls\\HomeUserControls\\Assistindo.cs",
-              "RelativeToolTip": "AnimesHub\\Forms\\UserControls\\HomeUserControls\\Assistindo.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABUAAAANAAAAAAAAAA==",
+              "Title": "PesquisarAnimes.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\loock\\VisualStudioProjetos\\ProjetosPessoais\\AnimesHub\\AnimesHub\\Forms\\UserControls\\HomeUserControls\\UcHomePrincipal\\PesquisarAnimes.cs",
+              "RelativeDocumentMoniker": "AnimesHub\\Forms\\UserControls\\HomeUserControls\\UcHomePrincipal\\PesquisarAnimes.cs",
+              "ToolTip": "C:\\Users\\loock\\VisualStudioProjetos\\ProjetosPessoais\\AnimesHub\\AnimesHub\\Forms\\UserControls\\HomeUserControls\\UcHomePrincipal\\PesquisarAnimes.cs [Design]",
+              "RelativeToolTip": "AnimesHub\\Forms\\UserControls\\HomeUserControls\\UcHomePrincipal\\PesquisarAnimes.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T15:16:14.977Z",
+              "WhenOpened": "2026-05-30T00:09:44.049Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SolicitarAnime.cs",
+              "DocumentMoniker": "C:\\Users\\loock\\VisualStudioProjetos\\ProjetosPessoais\\AnimesHub\\AnimesHub\\Forms\\SolicitarAnime.cs",
+              "RelativeDocumentMoniker": "AnimesHub\\Forms\\SolicitarAnime.cs",
+              "ToolTip": "C:\\Users\\loock\\VisualStudioProjetos\\ProjetosPessoais\\AnimesHub\\AnimesHub\\Forms\\SolicitarAnime.cs",
+              "RelativeToolTip": "AnimesHub\\Forms\\SolicitarAnime.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAgwJIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T03:01:47.174Z",
               "EditorCaption": ""
             }
           ]

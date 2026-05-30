@@ -28,30 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
+            pnlLançamento = new Panel();
             flpLancamentosHome = new FlowLayoutPanel();
             panel2 = new Panel();
             label1 = new Label();
-            panel1.SuspendLayout();
+            pnlAcompanhando = new Panel();
+            flpAcompanhandoHome = new FlowLayoutPanel();
+            panel3 = new Panel();
+            label2 = new Label();
+            pnlLançamento.SuspendLayout();
             panel2.SuspendLayout();
+            pnlAcompanhando.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // pnlLançamento
             // 
-            panel1.Controls.Add(flpLancamentosHome);
-            panel1.Controls.Add(panel2);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1008, 522);
-            panel1.TabIndex = 1;
+            pnlLançamento.Controls.Add(flpLancamentosHome);
+            pnlLançamento.Controls.Add(panel2);
+            pnlLançamento.Dock = DockStyle.Top;
+            pnlLançamento.Location = new Point(0, 0);
+            pnlLançamento.Name = "pnlLançamento";
+            pnlLançamento.Size = new Size(1008, 380);
+            pnlLançamento.TabIndex = 1;
             // 
             // flpLancamentosHome
             // 
             flpLancamentosHome.Dock = DockStyle.Fill;
             flpLancamentosHome.Location = new Point(0, 54);
             flpLancamentosHome.Name = "flpLancamentosHome";
-            flpLancamentosHome.Size = new Size(1008, 468);
+            flpLancamentosHome.Size = new Size(1008, 326);
             flpLancamentosHome.TabIndex = 1;
             // 
             // panel2
@@ -73,25 +79,70 @@
             label1.TabIndex = 0;
             label1.Text = "Lançamento";
             // 
+            // pnlAcompanhando
+            // 
+            pnlAcompanhando.Controls.Add(flpAcompanhandoHome);
+            pnlAcompanhando.Controls.Add(panel3);
+            pnlAcompanhando.Dock = DockStyle.Top;
+            pnlAcompanhando.Location = new Point(0, 380);
+            pnlAcompanhando.Name = "pnlAcompanhando";
+            pnlAcompanhando.Size = new Size(1008, 380);
+            pnlAcompanhando.TabIndex = 2;
+            // 
+            // flpAcompanhandoHome
+            // 
+            flpAcompanhandoHome.Dock = DockStyle.Fill;
+            flpAcompanhandoHome.Location = new Point(0, 54);
+            flpAcompanhandoHome.Name = "flpAcompanhandoHome";
+            flpAcompanhandoHome.Size = new Size(1008, 326);
+            flpAcompanhandoHome.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(label2);
+            panel3.Dock = DockStyle.Top;
+            panel3.Location = new Point(0, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1008, 54);
+            panel3.TabIndex = 0;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Knight Souls Personal Use", 18F, FontStyle.Bold | FontStyle.Italic);
+            label2.Location = new Point(16, 17);
+            label2.Name = "label2";
+            label2.Size = new Size(284, 33);
+            label2.TabIndex = 0;
+            label2.Text = "Acompanhando";
+            // 
             // HomePrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(panel1);
+            Controls.Add(pnlAcompanhando);
+            Controls.Add(pnlLançamento);
             Name = "HomePrincipal";
-            Size = new Size(1008, 682);
+            Size = new Size(1008, 957);
             Load += HomePrincipal_Load;
-            panel1.ResumeLayout(false);
+            pnlLançamento.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            pnlAcompanhando.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel pnlLançamento;
         private FlowLayoutPanel flpLancamentosHome;
         private Panel panel2;
         private Label label1;
+        private Panel pnlAcompanhando;
+        private FlowLayoutPanel flpAcompanhandoHome;
+        private Panel panel3;
+        private Label label2;
     }
 }

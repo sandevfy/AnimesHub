@@ -1,4 +1,5 @@
 ﻿using AnimesHub.Forms.UserControls.HomeUserControls;
+using AnimesHub.Forms.UserControls.HomeUserControls.UcHomePrincipal;
 using AnimesHub.Models;
 
 namespace AnimesHub.Forms
@@ -31,6 +32,16 @@ namespace AnimesHub.Forms
         private void btnNovidadesHome_Click(object sender, EventArgs e)
         {
             pnlConteudo.Controls.Clear();
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            pnlConteudo.Controls.Clear();
+
+            PesquisarAnimes pesq = new PesquisarAnimes(_usuarioLogado);
+            pesq.Dock = DockStyle.Fill;
+
+            pnlConteudo.Controls.Add(pesq);
         }
     }
 }

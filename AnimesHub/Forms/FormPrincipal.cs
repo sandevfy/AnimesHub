@@ -141,5 +141,15 @@ namespace AnimesHub.Forms
 
             pnlConteudo.Controls.Add(favHome);
         }
+
+        private void btnSolicitarAnime_Click(object sender, EventArgs e)
+        {
+            pnlConteudo.Controls.Clear();
+
+            SolicitarAnime solicHome = new SolicitarAnime(_usuarioLogado);
+            solicHome.Dock = DockStyle.Fill;
+
+            pnlConteudo.Controls.Add(solicHome);
+        }
     }
 }

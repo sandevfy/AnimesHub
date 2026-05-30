@@ -1,6 +1,7 @@
 ﻿using AnimesHub.Data;
 using AnimesHub.Models;
 using System.Data;
+using System.Net.Http.Headers;
 
 namespace AnimesHub.Forms.UserControls
 {
@@ -26,7 +27,6 @@ namespace AnimesHub.Forms.UserControls
             using var db = new AppDbContext();
 
             if (!ValidarCadastro()) return;
-
             if (!int.TryParse(txtCriarAnimesTemporadas.Text, out int temps))
             {
                 MessageBox.Show("Digite um numero de temporadas valido");
@@ -38,34 +38,64 @@ namespace AnimesHub.Forms.UserControls
                 return;
             }
 
-
-            var anime = new Anime
+            if (int.TryParse(txtIdBuscarAnimeAdd.Text, out var buscarId))
             {
-                Name = txtCriarAnimesNome.Text,
-                Studio = txtCriarAnimesStudio.Text,
-                Genero = txtCriarAnimesGenero.Text,
-                Temporadas = temps,
-                Episodios = eps,
-                DateLancamento = dtCriarAnimesDateLancamento.Value,
-                Sinopse = txtCriarAnimesSinopse.Text
-            };
+                var animEdit = db.Animes.Find(buscarId);
 
+                if (animEdit == null)
+                {
+                    MessageBox.Show("Anime não encontrado.");
+                    return;
+                }
+                animEdit.Name = txtCriarAnimesNome.Text;
+                animEdit.Studio = txtCriarAnimesStudio.Text;
+                animEdit.Genero = txtCriarAnimesGenero.Text;
+                animEdit.Temporadas = temps;
+                animEdit.Episodios = eps;
+                animEdit.DateLancamento = dtCriarAnimesDateLancamento.Value;
+                animEdit.Sinopse = txtCriarAnimesSinopse.Text;
 
-            DialogResult result = MessageBox.Show("Deseja Salvar Este Anime?",
-                "Confirmação",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("Deseja Editar Este Anime?",
+                   "Confirmação",
+                   MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (result == DialogResult.Yes)
-            {
-                db.Animes.Add(anime);
-                db.SaveChanges();
-
-                MessageBox.Show("Anime Salvo com Sucesso!");
-                LimparCampos();
+                if (result == DialogResult.No) return;
             }
+            else
+            {
+                var anime = new Anime
+                {
+                    Name = txtCriarAnimesNome.Text,
+                    Studio = txtCriarAnimesStudio.Text,
+                    Genero = txtCriarAnimesGenero.Text,
+                    Temporadas = temps,
+                    Episodios = eps,
+                    DateLancamento = dtCriarAnimesDateLancamento.Value,
+                    Sinopse = txtCriarAnimesSinopse.Text
+                };
+
+
+                DialogResult result = MessageBox.Show(
+                    "Deseja Salvar Este Anime?",
+                    "Confirmação",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+                if (result == DialogResult.No) return;
+
+                    db.Animes.Add(anime);
+            }
+
+            db.SaveChanges();
+
+            MessageBox.Show("Anime Salvo com Sucesso!");
+            LoadDgvAnimes();
+            LimparCampos();
         }
         private bool ValidarCadastro()
         {
+            using var db = new AppDbContext();
+
             List<string> erros = new();
 
             var nameAnime = txtCriarAnimesNome.Text;
@@ -75,6 +105,11 @@ namespace AnimesHub.Forms.UserControls
             var temps = txtCriarAnimesTemporadas.Text;
             var eps = txtCriarAnimesEpisodios.Text;
 
+            if (db.Animes.Any(x => x.Name.ToLower() == nameAnime.ToLower()))
+            {
+                MessageBox.Show("Anime ja existe!");
+                return false;
+            }
             if (string.IsNullOrWhiteSpace(nameAnime))
             {
                 erros.Add("Digite um nome.");
@@ -122,6 +157,7 @@ namespace AnimesHub.Forms.UserControls
             txtCriarAnimesEpisodios.Clear();
             dtCriarAnimesDateLancamento.Value = DateTime.Now;
             txtCriarAnimesSinopse.Clear();
+            txtIdBuscarAnimeAdd.Clear();
         }
 
         private void btnListarAnimes_Click(object sender, EventArgs e)
@@ -188,6 +224,32 @@ namespace AnimesHub.Forms.UserControls
 
                 MessageBox.Show("Anime excluido com sucesso!");
             }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            using var db = new AppDbContext();
+
+            if (!int.TryParse(txtIdBuscarAnimeAdd.Text, out int id))
+            {
+                MessageBox.Show("Anime não encontrado!");
+                return;
+            }
+
+            var anime = db.Animes.Find(id);
+            if (anime == null)
+            {
+                MessageBox.Show("Anime não encontrado!");
+                return;
+            }
+
+            txtCriarAnimesNome.Text = anime.Name;
+            txtCriarAnimesStudio.Text = anime.Studio;
+            txtCriarAnimesGenero.Text = anime.Genero;
+            txtCriarAnimesTemporadas.Text = anime.Temporadas.ToString();
+            txtCriarAnimesEpisodios.Text = anime.Episodios.ToString();
+            dtCriarAnimesDateLancamento.Value = anime.DateLancamento;
+            txtCriarAnimesSinopse.Text = anime.Sinopse;
         }
     }
 }

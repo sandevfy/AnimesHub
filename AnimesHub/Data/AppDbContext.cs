@@ -26,5 +26,6 @@ namespace AnimesHub.Data
         public DbSet<Anime> Animes { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<UsuarioAnime> UsuariosAnimes { get; set; }
+        public DbSet<SolicitacaoAnime> SolicitacaoAnimes { get; set; }
     }
 }

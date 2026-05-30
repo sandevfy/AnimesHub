@@ -1,14 +1,6 @@
 ﻿using AnimesHub.Data;
 using AnimesHub.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace AnimesHub.Forms.UserControls
 {
@@ -28,9 +20,9 @@ namespace AnimesHub.Forms.UserControls
 
         private void LoardCards()
         {
-            using (var context = new AppDbContext())
+            using (var db = new AppDbContext())
             {
-                var animes = context.UsuariosAnimes.Where(x => x.UsuarioId == _usuarioLongado.Id && x.StatusAnime == Enums.StatusAnime.Acompanhando)
+                var animes = db.UsuariosAnimes.Where(x => x.UsuarioId == _usuarioLongado.Id && x.StatusAnime == Enums.StatusAnime.Acompanhando)
                     .Select(x => x.Anime).ToList();
 
                 foreach (var anime in animes)

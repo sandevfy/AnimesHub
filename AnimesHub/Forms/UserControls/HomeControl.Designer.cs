@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             panel1 = new Panel();
+            btnPesquisar = new Button();
             btnCategoriaStrip = new Button();
             button2 = new Button();
             btnNovidadesHome = new Button();
@@ -52,6 +53,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(btnPesquisar);
             panel1.Controls.Add(btnCategoriaStrip);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(btnNovidadesHome);
@@ -61,6 +63,17 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1227, 59);
             panel1.TabIndex = 0;
+            // 
+            // btnPesquisar
+            // 
+            btnPesquisar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnPesquisar.Location = new Point(1117, 17);
+            btnPesquisar.Name = "btnPesquisar";
+            btnPesquisar.Size = new Size(91, 34);
+            btnPesquisar.TabIndex = 4;
+            btnPesquisar.Text = "Pesquisar";
+            btnPesquisar.UseVisualStyleBackColor = true;
+            btnPesquisar.Click += btnPesquisar_Click;
             // 
             // btnCategoriaStrip
             // 
@@ -211,5 +224,6 @@
         private ToolStripMenuItem dramaToolStripMenuItem1;
         private ToolStripMenuItem dramaToolStripMenuItem;
         private Panel pnlConteudo;
+        private Button btnPesquisar;
     }
 }

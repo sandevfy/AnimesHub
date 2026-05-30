@@ -54,6 +54,7 @@
             btnListarAnimes = new Button();
             pnlListarAnime = new Panel();
             dgvListarAnimes = new DataGridView();
+            btnEditar = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pnlCadastrarAnime.SuspendLayout();
             pnlListarAnime.SuspendLayout();
@@ -225,6 +226,7 @@
             // 
             // pnlCadastrarAnime
             // 
+            pnlCadastrarAnime.Controls.Add(btnEditar);
             pnlCadastrarAnime.Controls.Add(label8);
             pnlCadastrarAnime.Controls.Add(txtIdBuscarAnimeAdd);
             pnlCadastrarAnime.Controls.Add(btnExcluirAnimeAdd);
@@ -276,7 +278,7 @@
             // btnExcluirAnimeAdd
             // 
             btnExcluirAnimeAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnExcluirAnimeAdd.Location = new Point(153, 748);
+            btnExcluirAnimeAdd.Location = new Point(234, 748);
             btnExcluirAnimeAdd.Name = "btnExcluirAnimeAdd";
             btnExcluirAnimeAdd.Size = new Size(75, 23);
             btnExcluirAnimeAdd.TabIndex = 22;
@@ -326,6 +328,17 @@
             dgvListarAnimes.Size = new Size(428, 826);
             dgvListarAnimes.TabIndex = 0;
             // 
+            // btnEditar
+            // 
+            btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnEditar.Location = new Point(153, 748);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(75, 23);
+            btnEditar.TabIndex = 25;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
+            // 
             // AdicionarAnimes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -372,5 +385,6 @@
         private TextBox txtIdBuscarAnimeAdd;
         private Button btnExcluirAnimeAdd;
         private Label label8;
+        private Button btnEditar;
     }
 }

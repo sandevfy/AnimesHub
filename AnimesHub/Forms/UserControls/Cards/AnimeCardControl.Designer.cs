@@ -58,12 +58,12 @@
             // 
             // lblNomeAnimeCard
             // 
-            lblNomeAnimeCard.AutoSize = true;
-            lblNomeAnimeCard.Location = new Point(61, 213);
+            lblNomeAnimeCard.Location = new Point(10, 213);
             lblNomeAnimeCard.Name = "lblNomeAnimeCard";
-            lblNomeAnimeCard.Size = new Size(44, 15);
+            lblNomeAnimeCard.Size = new Size(149, 15);
             lblNomeAnimeCard.TabIndex = 1;
             lblNomeAnimeCard.Text = "Naruto";
+            lblNomeAnimeCard.TextAlign = ContentAlignment.TopCenter;
             // 
             // lblDescAnimeCard
             // 
@@ -72,17 +72,18 @@
             lblDescAnimeCard.Size = new Size(160, 50);
             lblDescAnimeCard.TabIndex = 2;
             lblDescAnimeCard.Text = "Um Ninja querendo ser Hokage";
+            lblDescAnimeCard.TextAlign = ContentAlignment.TopCenter;
             // 
             // lblAnoAnimeCard
             // 
-            lblAnoAnimeCard.AutoSize = true;
-            lblAnoAnimeCard.Location = new Point(64, 278);
+            lblAnoAnimeCard.Location = new Point(10, 278);
             lblAnoAnimeCard.Margin = new Padding(10);
             lblAnoAnimeCard.Name = "lblAnoAnimeCard";
             lblAnoAnimeCard.Padding = new Padding(5);
-            lblAnoAnimeCard.Size = new Size(41, 25);
+            lblAnoAnimeCard.Size = new Size(138, 22);
             lblAnoAnimeCard.TabIndex = 3;
             lblAnoAnimeCard.Text = "2000";
+            lblAnoAnimeCard.TextAlign = ContentAlignment.TopCenter;
             // 
             // btnMenuStrip
             // 

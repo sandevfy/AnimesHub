@@ -103,6 +103,7 @@
             btnSolicitarAnime.TabIndex = 12;
             btnSolicitarAnime.Text = "Solicitar";
             btnSolicitarAnime.UseVisualStyleBackColor = true;
+            btnSolicitarAnime.Click += btnSolicitarAnime_Click;
             // 
             // btnAdicionarAnimes
             // 
